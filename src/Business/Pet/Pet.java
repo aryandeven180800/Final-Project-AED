@@ -11,7 +11,7 @@ import java.util.Date;
  * @author shrey
  */
 public class Pet {
-    nt childId;
+    int childId;
     String name;
     int childAge;
     String status;

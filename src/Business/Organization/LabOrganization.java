@@ -3,11 +3,36 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Business.Organization;
+import Business.Role.LabAssistantRole;
+import Business.Role.Role;
+import java.util.ArrayList;
 
 /**
  *
  * @author shrey
  */
-public class LabOrganization {
+public class LabOrganization extends Organization{
+    String name;
+    public LabOrganization(String name) {
+        super(name);
+        this.name=name;
+    }
+
+    @Override
+    public ArrayList<Role> getSupportedRole() {
+        ArrayList<Role> roles = new ArrayList();
+        roles.add(new LabAssistantRole());
+        return roles;
+    }
+
+    @Override
+    public Type getType() {
+        return  Organization.Type.Lab;
+    }
+     
+    
+   
+    
     
 }
+
