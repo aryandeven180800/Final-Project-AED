@@ -71,11 +71,13 @@ public class ViewAndProcessTransactionRecord extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("TRANSACTION RECORD");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(326, 32, 320, 20));
 
+        jTable2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jTable2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -96,6 +98,7 @@ public class ViewAndProcessTransactionRecord extends javax.swing.JPanel {
 
         add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 870, 110));
 
+        btnAssign.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         btnAssign.setText("Assign To Me");
         btnAssign.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,6 +107,7 @@ public class ViewAndProcessTransactionRecord extends javax.swing.JPanel {
         });
         add(btnAssign, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 330, 133, 33));
 
+        btnProcess.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         btnProcess.setText("Process");
         btnProcess.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
