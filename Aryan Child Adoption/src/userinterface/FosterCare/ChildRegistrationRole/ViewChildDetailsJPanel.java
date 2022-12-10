@@ -121,7 +121,7 @@ public class ViewChildDetailsJPanel extends javax.swing.JPanel {
         jLabel1.setText("VIEW CHILD DETAILS");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 50, 520, 40));
 
-        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("Name");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 150, 30));
@@ -129,7 +129,7 @@ public class ViewChildDetailsJPanel extends javax.swing.JPanel {
         nameTextField.setEnabled(false);
         add(nameTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 90, 210, 30));
 
-        jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Arial Black", 1, 13)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Age");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 150, 150, 30));
@@ -158,7 +158,8 @@ public class ViewChildDetailsJPanel extends javax.swing.JPanel {
         });
         add(updateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 620, 133, 33));
 
-        saveBtn.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        saveBtn.setBackground(new java.awt.Color(204, 204, 0));
+        saveBtn.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         saveBtn.setText("Save");
         saveBtn.setEnabled(false);
         saveBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -169,6 +170,7 @@ public class ViewChildDetailsJPanel extends javax.swing.JPanel {
         add(saveBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 620, 133, 33));
 
         CancelBtn.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        CancelBtn.setForeground(new java.awt.Color(255, 153, 0));
         CancelBtn.setText("Cancel");
         CancelBtn.setEnabled(false);
         CancelBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -209,6 +211,8 @@ public class ViewChildDetailsJPanel extends javax.swing.JPanel {
         });
         add(imageTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 300, 210, 30));
 
+        uploadBtn.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        uploadBtn.setForeground(new java.awt.Color(255, 51, 51));
         uploadBtn.setText("Update Photo");
         uploadBtn.setEnabled(false);
         uploadBtn.addActionListener(new java.awt.event.ActionListener() {
