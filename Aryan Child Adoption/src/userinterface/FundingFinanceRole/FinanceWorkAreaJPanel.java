@@ -66,13 +66,13 @@ public FinanceWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, O
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable1.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        jTable1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Message", "Sender", "Receiver", "Child ID", "Remarks", "Status"
+                "Message", "Sender", "Receiver", "Child ID", "Remarks/Comments", "Status"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -87,7 +87,7 @@ public FinanceWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, O
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, 890, 160));
 
-        btnAssigToMe.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
+        btnAssigToMe.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         btnAssigToMe.setText("Assign To Me");
         btnAssigToMe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,7 +105,7 @@ public FinanceWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, O
         });
         add(btnProcess, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 440, 133, 33));
 
-        jLabel2.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("VIEW FUND REQUESTS");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 70, 270, -1));

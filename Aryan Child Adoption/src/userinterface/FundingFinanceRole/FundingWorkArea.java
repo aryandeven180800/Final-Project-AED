@@ -88,7 +88,7 @@ public class FundingWorkArea extends javax.swing.JPanel {
         systemAdminPanel.setBackground(new java.awt.Color(255, 204, 153));
         systemAdminPanel.setPreferredSize(new java.awt.Dimension(1338, 840));
 
-        jPanel3.setBackground(new java.awt.Color(255, 204, 153));
+        jPanel3.setBackground(new java.awt.Color(255, 51, 51));
         jPanel3.setMinimumSize(new java.awt.Dimension(280, 148));
         jPanel3.setPreferredSize(new java.awt.Dimension(280, 148));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -105,7 +105,7 @@ public class FundingWorkArea extends javax.swing.JPanel {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/manageIcon.png"))); // NOI18N
         manageNetworkPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 40));
 
-        DonorWorkArea.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        DonorWorkArea.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         DonorWorkArea.setText("Fund Request Work Area");
         DonorWorkArea.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -128,7 +128,7 @@ public class FundingWorkArea extends javax.swing.JPanel {
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/statusIcon.png"))); // NOI18N
         lblViewYourStatus.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 37, 40));
 
-        lblViewStatus.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        lblViewStatus.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         lblViewStatus.setText("Transaction Work Area");
         lblViewStatus.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -139,10 +139,11 @@ public class FundingWorkArea extends javax.swing.JPanel {
 
         jPanel3.add(lblViewYourStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 280, 40));
 
+        jLabel1.setForeground(new java.awt.Color(255, 204, 51));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/mgr2.png"))); // NOI18N
         jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 200, 210));
 
-        jLabel3.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Organization");
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 90, 20));
