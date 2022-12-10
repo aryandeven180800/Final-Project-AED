@@ -102,7 +102,7 @@ public class PharmacyWorkArea extends javax.swing.JPanel {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/manageIcon.png"))); // NOI18N
         managePharmacyPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 37, -1));
 
-        PharmacyWorkArea.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        PharmacyWorkArea.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         PharmacyWorkArea.setText("Pharmacist Work Area");
         PharmacyWorkArea.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -116,7 +116,7 @@ public class PharmacyWorkArea extends javax.swing.JPanel {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/pharGirl.png"))); // NOI18N
         jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 200, 200));
 
-        jLabel3.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Organization");
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 90, 20));
