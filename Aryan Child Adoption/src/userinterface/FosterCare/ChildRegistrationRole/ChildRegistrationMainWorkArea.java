@@ -98,7 +98,7 @@ public class ChildRegistrationMainWorkArea extends javax.swing.JPanel {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/manageIcon.png"))); // NOI18N
 
         childRegistration.setBackground(new java.awt.Color(255, 204, 204));
-        childRegistration.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        childRegistration.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         childRegistration.setText("Child Registration Area");
         childRegistration.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -129,7 +129,7 @@ public class ChildRegistrationMainWorkArea extends javax.swing.JPanel {
 
         jPanel3.add(LabNetworkPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 280, -1));
 
-        lblViewChild.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        lblViewChild.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         lblViewChild.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblViewChild.setText("View Child Records");
         lblViewChild.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -139,7 +139,8 @@ public class ChildRegistrationMainWorkArea extends javax.swing.JPanel {
         });
         jPanel3.add(lblViewChild, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 230, 40));
 
-        jLabel1.setBackground(new java.awt.Color(204, 0, 51));
+        jLabel1.setBackground(new java.awt.Color(204, 204, 0));
+        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/manager.png"))); // NOI18N
         jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 180, 180));
         jPanel3.add(view, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 280, 40));
@@ -147,7 +148,7 @@ public class ChildRegistrationMainWorkArea extends javax.swing.JPanel {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/statusIcon.png"))); // NOI18N
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 50, 40));
 
-        jLabel4.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Arial Black", 1, 13)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel4.setText("Organization");
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 190, 110, 20));
