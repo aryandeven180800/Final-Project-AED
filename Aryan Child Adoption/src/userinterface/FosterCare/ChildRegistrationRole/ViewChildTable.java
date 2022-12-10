@@ -77,9 +77,12 @@ public class ViewChildTable extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        setForeground(new java.awt.Color(153, 153, 0));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tblNewChild.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        tblNewChild.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 0), 1, true));
+        tblNewChild.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         tblNewChild.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -121,7 +124,7 @@ public class ViewChildTable extends javax.swing.JPanel {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/transparentKids.png"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 410, 480, 330));
 
-        jLabel3.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("VIEW CHILD RECORDS");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 50, 370, 30));
