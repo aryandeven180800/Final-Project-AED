@@ -25,7 +25,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author LENOVO
+ * @author 12013
  */
 public class AcquireChild extends javax.swing.JPanel {
 
@@ -91,13 +91,12 @@ public class AcquireChild extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        workTable.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         workTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Comments/Description", "Pharmaceutical Name", "Child Care Admin Domain", "Child ID", "Child Name", "Status/Updates"
+                "Comments", "Pharmacy Name", "Child Care Admin", "Child ID", "Child Name", "Status"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -112,18 +111,18 @@ public class AcquireChild extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, 870, 130));
 
-        processBtn.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
-        processBtn.setForeground(new java.awt.Color(204, 51, 0));
+        processBtn.setBackground(new java.awt.Color(255, 255, 255));
+        processBtn.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         processBtn.setText("Process Request");
         processBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 processBtnActionPerformed(evt);
             }
         });
-        add(processBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 370, 190, 33));
+        add(processBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 370, 160, 33));
 
-        btnAssign.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
-        btnAssign.setForeground(new java.awt.Color(255, 0, 0));
+        btnAssign.setBackground(new java.awt.Color(255, 255, 255));
+        btnAssign.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         btnAssign.setText("Assign to me");
         btnAssign.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,7 +135,7 @@ public class AcquireChild extends javax.swing.JPanel {
         jLabel4.setText("jLabel4");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 1010, 370));
 
-        jLabel5.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("SansSerif", 1, 20)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("ACQUIRE CHILD ");
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, 320, -1));
