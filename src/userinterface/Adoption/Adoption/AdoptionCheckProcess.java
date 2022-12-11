@@ -6,7 +6,7 @@
 package userinterface.Adoption.Adoption;
 
 import Business.Adopter.Adopter;
-import Business.Adopter.AdopterDirectory;
+import Business.Adopter.AdpDirec;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
@@ -38,12 +38,12 @@ public class AdoptionCheckProcess extends javax.swing.JPanel {
     UserAccount account;
     Enterprise enterprise;
     EcoSystem business;
-    AdopterDirectory adopterdirectory;
+    AdpDirec adopterdirectory;
     AdoptionOrganization adoptionOrganization;
     Adopter adopter;
     AdoptionProcessWorkRequest adoptionWorkRequest;
     
-    public AdoptionCheckProcess(JPanel userProcessContainer,UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AdopterDirectory adopterdirectory, AdoptionProcessWorkRequest adoptionWorkRequest, Adopter adopter) {
+    public AdoptionCheckProcess(JPanel userProcessContainer,UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AdpDirec adopterdirectory, AdoptionProcessWorkRequest adoptionWorkRequest, Adopter adopter) {
         initComponents();
         initComponents();
         this.userProcessContainer=userProcessContainer;

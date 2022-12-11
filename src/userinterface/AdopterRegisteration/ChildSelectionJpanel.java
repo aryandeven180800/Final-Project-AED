@@ -6,7 +6,7 @@
 package userinterface.AdopterRegisteration;
 
 import Business.Adopter.Adopter;
-import Business.Adopter.AdopterDirectory;
+import Business.Adopter.AdpDirec;
 import Business.Child.Child;
 import Business.Child.ChildDirectory;
 import Business.EcoSystem;
@@ -36,7 +36,7 @@ public class ChildSelectionJpanel extends javax.swing.JPanel {
     UserAccount account;
     Enterprise enterprise;
     EcoSystem business;
-    AdopterDirectory adopterdirectory;
+    AdpDirec adopterdirectory;
     AdopterOrganization adopterorganization;
     Adopter adopter;
     String bgcstatus,financestatus;
@@ -44,7 +44,7 @@ public class ChildSelectionJpanel extends javax.swing.JPanel {
     ChildDirectory childdirectory;
     ChildCareWorkRequest request;
     
-    public ChildSelectionJpanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AdopterDirectory adopterdirectory, int uid, ChildDirectory childdirectory) {
+    public ChildSelectionJpanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AdpDirec adopterdirectory, int uid, ChildDirectory childdirectory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.adopterdirectory = adopterdirectory;

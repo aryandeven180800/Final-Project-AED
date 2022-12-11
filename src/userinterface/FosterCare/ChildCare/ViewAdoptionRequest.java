@@ -6,7 +6,7 @@
 package userinterface.FosterCare.ChildCare;
 
 import Business.Adopter.Adopter;
-import Business.Adopter.AdopterDirectory;
+import Business.Adopter.AdpDirec;
 import Business.Child.Child;
 import Business.Child.ChildDirectory;
 import Business.EcoSystem;
@@ -42,13 +42,13 @@ public class ViewAdoptionRequest extends javax.swing.JPanel {
     ChildDirectory childdirectory;
     Child child;
     EcoSystem business;
-    AdopterDirectory adopterdirectory;
+    AdpDirec adopterdirectory;
     Adopter adopter;
     Role roler;
     Network network;
     
     
-    public ViewAdoptionRequest(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, AdopterDirectory adopterdirectory) {
+    public ViewAdoptionRequest(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, AdpDirec adopterdirectory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.account = account;

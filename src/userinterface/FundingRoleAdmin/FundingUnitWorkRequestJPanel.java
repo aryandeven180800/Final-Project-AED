@@ -5,7 +5,7 @@
  */
 package userinterface.FundingRoleAdmin;
 
-import Business.Adopter.AdopterDirectory;
+import Business.Adopter.AdpDirec;
 import Business.Donor.Donor;
 import Business.Donor.DonorDirectory;
 import Business.EcoSystem;
@@ -39,10 +39,10 @@ public class FundingUnitWorkRequestJPanel extends javax.swing.JPanel {
     private Enterprise enterprise;
     private Network network;
     private OrganizationDirectory organizationDirectory;
-    AdopterDirectory adopterdirectory;
+    AdpDirec adopterdirectory;
     DonorDirectory donorDirectory;
 
-    public FundingUnitWorkRequestJPanel(JPanel userProcessContainer, UserAccount account, Enterprise enterprise, EcoSystem system, AdopterDirectory adopterdirectory, DonorDirectory donorDirectory) {
+    public FundingUnitWorkRequestJPanel(JPanel userProcessContainer, UserAccount account, Enterprise enterprise, EcoSystem system, AdpDirec adopterdirectory, DonorDirectory donorDirectory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.userAccount = account;

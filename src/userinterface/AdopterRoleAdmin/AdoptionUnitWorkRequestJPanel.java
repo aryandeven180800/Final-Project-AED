@@ -6,7 +6,7 @@
 package userinterface.AdopterRoleAdmin;
 
 import Business.Adopter.Adopter;
-import Business.Adopter.AdopterDirectory;
+import Business.Adopter.AdpDirec;
 import Business.EcoSystem;
 import Business.Employee.Employee;
 import Business.Enterprise.Enterprise;
@@ -38,9 +38,9 @@ public class AdoptionUnitWorkRequestJPanel extends javax.swing.JPanel {
     private Enterprise enterprise;
     private Network network;
     private OrganizationDirectory organizationDirectory;
-    AdopterDirectory adopterdirectory;
+    AdpDirec adopterdirectory;
 
-    public AdoptionUnitWorkRequestJPanel(JPanel userProcessContainer, UserAccount account, Enterprise enterprise, EcoSystem system, AdopterDirectory adopterdirectory) {
+    public AdoptionUnitWorkRequestJPanel(JPanel userProcessContainer, UserAccount account, Enterprise enterprise, EcoSystem system, AdpDirec adopterdirectory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.userAccount = account;

@@ -6,7 +6,7 @@
 package userinterface.AdopterRegisteration;
 
 import Business.Adopter.Adopter;
-import Business.Adopter.AdopterDirectory;
+import Business.Adopter.AdpDirec;
 import Business.Child.ChildDirectory;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
@@ -34,14 +34,14 @@ public class CheckStatusJPanel extends javax.swing.JPanel {
     UserAccount account;
     Enterprise enterprise;
     EcoSystem business;
-    AdopterDirectory adopterdirectory;
+    AdpDirec adopterdirectory;
     AdopterOrganization adopterorganization;
     Adopter adopter;
     String bgcstatus,financestatus;
     int uid;
     ChildDirectory childdirectory;
     
-    public CheckStatusJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AdopterDirectory adopterdirectory, int uid, ChildDirectory childdirectory) {
+    public CheckStatusJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AdpDirec adopterdirectory, int uid, ChildDirectory childdirectory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.adopterdirectory = adopterdirectory;

@@ -4,7 +4,7 @@
  */
 package userinterface;
 
-import Business.Adopter.AdopterDirectory;
+import Business.Adopter.AdpDirec;
 import Business.Child.ChildDirectory;
 import Business.EcoSystem;
 import Business.DB4OUtil.DB4OUtil;
@@ -35,7 +35,7 @@ public class MainJFrame extends javax.swing.JFrame {
     Organization inOrganization;
     Network networkEmergency;
     private ChildDirectory childdirectory;
-    private AdopterDirectory adopterdirectory;
+    private AdpDirec adopterdirectory;
     private DonorDirectory donorDirectory;
     
 

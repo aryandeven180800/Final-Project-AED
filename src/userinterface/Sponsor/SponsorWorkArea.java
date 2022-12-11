@@ -5,7 +5,7 @@
  */
 package userinterface.Sponsor;
 
-import Business.Adopter.AdopterDirectory;
+import Business.Adopter.AdpDirec;
 import Business.Child.ChildDirectory;
 import Business.Donor.Donor;
 import Business.Donor.DonorDirectory;
@@ -34,9 +34,9 @@ public class SponsorWorkArea extends javax.swing.JPanel {
     Donor donor;
     ChildDirectory childdirectory;
     DonorDirectory donorDirectory;
-    AdopterDirectory adopterdirectory;
+    AdpDirec adopterdirectory;
     
-    public SponsorWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AdopterDirectory adopterdirectory, ChildDirectory childdirectory, DonorDirectory donorDirectory) {
+    public SponsorWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AdpDirec adopterdirectory, ChildDirectory childdirectory, DonorDirectory donorDirectory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.account = account;

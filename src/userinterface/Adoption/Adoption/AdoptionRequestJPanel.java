@@ -6,7 +6,7 @@
 package userinterface.Adoption.Adoption;
 
 import Business.Adopter.Adopter;
-import Business.Adopter.AdopterDirectory;
+import Business.Adopter.AdpDirec;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.AdoptionOrganization;
@@ -33,11 +33,11 @@ public class AdoptionRequestJPanel extends javax.swing.JPanel {
     UserAccount account;
     Enterprise enterprise;
     EcoSystem business;
-    AdopterDirectory adopterdirectory;
+    AdpDirec adopterdirectory;
     AdoptionOrganization adoptionOrganization;
     Adopter adopter;
     
-    public AdoptionRequestJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AdopterDirectory adopterdirectory) {
+    public AdoptionRequestJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AdpDirec adopterdirectory) {
         initComponents();
         this.userProcessContainer=userProcessContainer;
         this.adopterdirectory=adopterdirectory;

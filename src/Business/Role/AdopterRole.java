@@ -5,7 +5,7 @@
  */
 package Business.Role;
 
-import Business.Adopter.AdopterDirectory;
+import Business.Adopter.AdpDirec;
 import Business.Child.ChildDirectory;
 import Business.Donor.DonorDirectory;
 import Business.EcoSystem;
@@ -23,7 +23,7 @@ import userinterface.AdopterRegisteration.AdopterWorkArea;
  */
 public class AdopterRole extends Role {
     @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, AdopterDirectory adopterdirectory, DonorDirectory donorDirectory) {
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, AdpDirec adopterdirectory, DonorDirectory donorDirectory) {
         return new AdopterWorkArea(userProcessContainer, account, organization, enterprise, business, adopterdirectory, childdirectory);
     }
     

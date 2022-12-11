@@ -5,7 +5,7 @@
  */
 package userinterface.AdministrativeRole;
 
-import Business.Adopter.AdopterDirectory;
+import Business.Adopter.AdpDirec;
 import Business.Child.ChildDirectory;
 import Business.Donor.DonorDirectory;
 import Business.EcoSystem;
@@ -33,11 +33,11 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
     Network network;
     UserAccount account;
     Organization organization;
-    AdopterDirectory adopterdirectory;
+    AdpDirec adopterdirectory;
     ChildDirectory childdirectory;
     DonorDirectory donorDirectory;
 
-    public AdminWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, AdopterDirectory adopterdirectory, DonorDirectory donorDirectory) {
+    public AdminWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, AdpDirec adopterdirectory, DonorDirectory donorDirectory) {
         initComponents();
         System.out.println("here");
         this.userProcessContainer = userProcessContainer;

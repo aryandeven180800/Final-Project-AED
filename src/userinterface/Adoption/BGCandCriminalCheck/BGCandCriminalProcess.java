@@ -6,7 +6,7 @@
 package userinterface.Adoption.BGCandCriminalCheck;
 
 import Business.Adopter.Adopter;
-import Business.Adopter.AdopterDirectory;
+import Business.Adopter.AdpDirec;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
@@ -36,12 +36,12 @@ public class BGCandCriminalProcess extends javax.swing.JPanel {
     UserAccount account;
     Enterprise enterprise;
     EcoSystem business;
-    AdopterDirectory adopterdirectory;
+    AdpDirec adopterdirectory;
     BackgroundAndCriminalCheckOrganization bgcOrganization;
     Adopter adopter;
     BGVProcessWorkRequest bgcWorkRequest;
     
-    public BGCandCriminalProcess(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AdopterDirectory adopterdirectory, BGVProcessWorkRequest bgcWorkRequest, Adopter adopter) {
+    public BGCandCriminalProcess(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AdpDirec adopterdirectory, BGVProcessWorkRequest bgcWorkRequest, Adopter adopter) {
         initComponents();
         this.userProcessContainer=userProcessContainer;
         this.adopterdirectory=adopterdirectory;

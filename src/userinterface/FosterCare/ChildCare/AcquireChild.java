@@ -6,7 +6,7 @@
 package userinterface.FosterCare.ChildCare;
 
 import Business.Adopter.Adopter;
-import Business.Adopter.AdopterDirectory;
+import Business.Adopter.AdpDirec;
 import Business.Child.Child;
 import Business.Child.ChildDirectory;
 import Business.EcoSystem;
@@ -41,12 +41,12 @@ public class AcquireChild extends javax.swing.JPanel {
     Child child;
     EcoSystem business;
     AcquireChild panel;
-    AdopterDirectory adopterdirectory;
+    AdpDirec adopterdirectory;
     Adopter adopter;
     Role roler;
     Network network;
 
-    public AcquireChild(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, AdopterDirectory adopterdirectory) {
+    public AcquireChild(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, AdpDirec adopterdirectory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.account = account;
