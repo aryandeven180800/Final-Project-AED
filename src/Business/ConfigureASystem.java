@@ -8,7 +8,7 @@ import Business.UserAccount.UserAccount;
 
 /**
  *
- * @author LEONOVO
+ * @author LENOVO
  */
 public class ConfigureASystem {
     
