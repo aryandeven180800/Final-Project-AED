@@ -7,7 +7,7 @@ package Business.WorkQueue;
 
 /**
  *
- * @author anushree_j
+ * @author snehaswaroop
  */
 public class AdoptionProcessWorkRequest extends WorkRequest {
     private String comments;

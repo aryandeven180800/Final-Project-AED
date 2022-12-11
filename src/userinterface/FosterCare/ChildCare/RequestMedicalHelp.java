@@ -13,7 +13,7 @@ import Business.Network.Network;
 import Business.Organization.ChildCareOrganization;
 import Business.Organization.DoctorOrganization;
 import Business.Organization.Organization;
-import Business.UAcc.UAcc;
+import Business.UserAccount.UserAccount;
 import Business.WorkQueue.MedicalHelpWorkRequest;
 import java.awt.CardLayout;
 import java.awt.Component;
@@ -23,7 +23,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author LENOVO
+ * @author shrey
  */
 public class RequestMedicalHelp extends javax.swing.JPanel {
 
@@ -32,14 +32,14 @@ public class RequestMedicalHelp extends javax.swing.JPanel {
      */
     JPanel userProcessContainer;
     Child child;
-    UAcc account;
+    UserAccount account;
     ChildCareOrganization organization;
     Enterprise enterprise;
     EcoSystem business;
     ChildDirectory childdirectory;
     Network network;
 
-    public RequestMedicalHelp(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, Child child) {
+    public RequestMedicalHelp(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, Child child) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.child = child;

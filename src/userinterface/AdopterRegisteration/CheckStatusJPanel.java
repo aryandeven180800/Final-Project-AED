@@ -6,13 +6,13 @@
 package userinterface.AdopterRegisteration;
 
 import Business.Adopter.Adopter;
-import Business.Adopter.AdpDirec;
+import Business.Adopter.AdopterDirectory;
 import Business.Child.ChildDirectory;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.AdopterOrganization;
 import Business.Organization.Organization;
-import Business.UAcc.UAcc;
+import Business.UserAccount.UserAccount;
 import Business.WorkQueue.AdopterStatusCheckWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
@@ -22,7 +22,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author shrey
+ * @author anushree_j
  */
 public class CheckStatusJPanel extends javax.swing.JPanel {
 
@@ -31,17 +31,17 @@ public class CheckStatusJPanel extends javax.swing.JPanel {
      */
     
     JPanel userProcessContainer;
-    UAcc account;
+    UserAccount account;
     Enterprise enterprise;
     EcoSystem business;
-    AdpDirec adopterdirectory;
+    AdopterDirectory adopterdirectory;
     AdopterOrganization adopterorganization;
     Adopter adopter;
     String bgcstatus,financestatus;
     int uid;
     ChildDirectory childdirectory;
     
-    public CheckStatusJPanel(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, AdpDirec adopterdirectory, int uid, ChildDirectory childdirectory) {
+    public CheckStatusJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AdopterDirectory adopterdirectory, int uid, ChildDirectory childdirectory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.adopterdirectory = adopterdirectory;
@@ -89,9 +89,9 @@ public class CheckStatusJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        tblreqstatus = new javax.swing.JScrollPane();
+        tblRequest = new javax.swing.JScrollPane();
         tblReq = new javax.swing.JTable();
-        btnProcclick = new javax.swing.JButton();
+        btnProceed = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -121,24 +121,24 @@ public class CheckStatusJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        tblreqstatus.setViewportView(tblReq);
+        tblRequest.setViewportView(tblReq);
 
-        add(tblreqstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 860, 130));
+        add(tblRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 860, 130));
 
-        btnProcclick.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
-        btnProcclick.setText("Proceed");
-        btnProcclick.addActionListener(new java.awt.event.ActionListener() {
+        btnProceed.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
+        btnProceed.setText("Proceed");
+        btnProceed.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnProcclickActionPerformed(evt);
+                btnProceedActionPerformed(evt);
             }
         });
-        add(btnProcclick, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 340, 150, 30));
+        add(btnProceed, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 340, 150, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/kids 2.png"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 920, 400));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnProcclickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcclickActionPerformed
+    private void btnProceedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProceedActionPerformed
         // TODO add your handling code here:
         if (tblReq.getRowCount() < 1) {
             JOptionPane.showMessageDialog(null, "Adoption request is still in process with the Investigation team");
@@ -151,14 +151,14 @@ public class CheckStatusJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Adoption request is still in process with the Investigation team");
         } else
             JOptionPane.showMessageDialog(null, "Adoption request denied by Investigation Team");
-    }//GEN-LAST:event_btnProcclickActionPerformed
+    }//GEN-LAST:event_btnProceedActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnProcclick;
+    private javax.swing.JButton btnProceed;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JTable tblReq;
-    private javax.swing.JScrollPane tblreqstatus;
+    private javax.swing.JScrollPane tblRequest;
     // End of variables declaration//GEN-END:variables
 }

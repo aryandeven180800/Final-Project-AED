@@ -10,8 +10,7 @@ import java.util.List;
 
 /**
  *
- * @author LENOVO
- * @author shrey
+ * @author Kunjan
  */
 public class DonorDirectory {
     List<Donor> donorsList;

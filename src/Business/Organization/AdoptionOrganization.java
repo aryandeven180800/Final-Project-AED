@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author anushree_j
+ * @author Kunjan
  */
 public class AdoptionOrganization extends Organization{
     String name;

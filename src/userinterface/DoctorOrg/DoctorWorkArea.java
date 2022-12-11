@@ -10,7 +10,7 @@ import Business.Child.ChildDirectory;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.DoctorOrganization;
-import Business.UAcc.UAcc;
+import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
@@ -28,11 +28,11 @@ public class DoctorWorkArea extends javax.swing.JPanel {
     private DoctorOrganization doctororganization;
     Enterprise enterprise;
     Child child;
-    private UAcc userAccount;
+    private UserAccount userAccount;
     ChildDirectory childdirectory;
     
     
-    public DoctorWorkArea(JPanel userProcessContainer, UAcc account, DoctorOrganization doctororganization, Enterprise enterprise ,EcoSystem ecosystem, ChildDirectory childdirectory) {
+    public DoctorWorkArea(JPanel userProcessContainer, UserAccount account, DoctorOrganization doctororganization, Enterprise enterprise ,EcoSystem ecosystem, ChildDirectory childdirectory) {
         initComponents();
         System.out.println("here");
         this.userProcessContainer=userProcessContainer;   

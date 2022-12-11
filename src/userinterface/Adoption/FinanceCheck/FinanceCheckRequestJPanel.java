@@ -6,12 +6,12 @@
 package userinterface.Adoption.FinanceCheck;
 
 import Business.Adopter.Adopter;
-import Business.Adopter.AdpDirec;
+import Business.Adopter.AdopterDirectory;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.FinanceCheckOrganization;
 import Business.Organization.Organization;
-import Business.UAcc.UAcc;
+import Business.UserAccount.UserAccount;
 import Business.WorkQueue.FinanceCheckProcessWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
@@ -30,14 +30,14 @@ public class FinanceCheckRequestJPanel extends javax.swing.JPanel {
      */
     
     JPanel userProcessContainer;
-    UAcc account;
+    UserAccount account;
     Enterprise enterprise;
     EcoSystem business;
-    AdpDirec adopterdirectory;
+    AdopterDirectory adopterdirectory;
     FinanceCheckOrganization financeOrganization;
     Adopter adopter;
     
-    public FinanceCheckRequestJPanel(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, AdpDirec adopterdirectory) {
+    public FinanceCheckRequestJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AdopterDirectory adopterdirectory) {
         initComponents();
         
         this.userProcessContainer=userProcessContainer;

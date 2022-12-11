@@ -5,7 +5,7 @@
  */
 package userinterface.Sponsor;
 
-import Business.Adopter.AdpDirec;
+import Business.Adopter.AdopterDirectory;
 import Business.Child.ChildDirectory;
 import Business.Donor.Donor;
 import Business.Donor.DonorDirectory;
@@ -13,13 +13,13 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.DonorOrganization;
 import Business.Organization.Organization;
-import Business.UAcc.UAcc;
+import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
 /**
  *
- * @author LENOVO
+ * @author shrey
  */
 public class SponsorWorkArea extends javax.swing.JPanel {
 
@@ -27,16 +27,16 @@ public class SponsorWorkArea extends javax.swing.JPanel {
      * Creates new form SystemAdminWorkAreaJPanel
      */
     JPanel userProcessContainer;
-    UAcc account;
+    UserAccount account;
     Enterprise enterprise;
     EcoSystem business;
     DonorOrganization donororganization;
     Donor donor;
     ChildDirectory childdirectory;
     DonorDirectory donorDirectory;
-    AdpDirec adopterdirectory;
+    AdopterDirectory adopterdirectory;
     
-    public SponsorWorkArea(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, AdpDirec adopterdirectory, ChildDirectory childdirectory, DonorDirectory donorDirectory) {
+    public SponsorWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AdopterDirectory adopterdirectory, ChildDirectory childdirectory, DonorDirectory donorDirectory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.account = account;

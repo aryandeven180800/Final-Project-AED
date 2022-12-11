@@ -5,7 +5,7 @@
  */
 package userinterface.FundingRoleAdmin;
 
-import Business.Adopter.AdpDirec;
+import Business.Adopter.AdopterDirectory;
 import Business.Donor.Donor;
 import Business.Donor.DonorDirectory;
 import Business.EcoSystem;
@@ -13,9 +13,9 @@ import Business.Employee.Employee;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.Organization;
-import Business.Organization.OrgDirectory;
+import Business.Organization.OrganizationDirectory;
 import Business.Role.DonorRole;
-import Business.UAcc.UAcc;
+import Business.UserAccount.UserAccount;
 import Business.Utils.CommonMail;
 import Business.WorkQueue.DonorRegistrationRequest;
 import Business.WorkQueue.DonorWorkRequest;
@@ -26,7 +26,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author shrey
+ * @author LENOVO
  */
 public class FundingUnitWorkRequestJPanel extends javax.swing.JPanel {
 
@@ -35,14 +35,14 @@ public class FundingUnitWorkRequestJPanel extends javax.swing.JPanel {
      */
     private JPanel userProcessContainer;
     private EcoSystem business;
-    private UAcc userAccount;
+    private UserAccount userAccount;
     private Enterprise enterprise;
     private Network network;
-    private OrgDirectory organizationDirectory;
-    AdpDirec adopterdirectory;
+    private OrganizationDirectory organizationDirectory;
+    AdopterDirectory adopterdirectory;
     DonorDirectory donorDirectory;
 
-    public FundingUnitWorkRequestJPanel(JPanel userProcessContainer, UAcc account, Enterprise enterprise, EcoSystem system, AdpDirec adopterdirectory, DonorDirectory donorDirectory) {
+    public FundingUnitWorkRequestJPanel(JPanel userProcessContainer, UserAccount account, Enterprise enterprise, EcoSystem system, AdopterDirectory adopterdirectory, DonorDirectory donorDirectory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.userAccount = account;
@@ -198,7 +198,7 @@ public class FundingUnitWorkRequestJPanel extends javax.swing.JPanel {
                 }
                 Organization org = organizationDirectory.createOrganization(request.getName(), Organization.Type.Donor);
                 Employee emp = org.getEmployeeDirectory().createEmployee(request.getName());
-                UAcc ua1 = org.getUserAccountDirectory().createUserAccount(request.getUserName(), request.getUserPassword(), emp, new DonorRole());
+                UserAccount ua1 = org.getUserAccountDirectory().createUserAccount(request.getUserName(), request.getUserPassword(), emp, new DonorRole());
                 Donor donor = new Donor();
                 int uid = donorDirectory.getDonorsList().size() + 1;
                 donor = this.donorDirectory.addDonor();

@@ -6,18 +6,18 @@
 package Business.Enterprise;
 
 import Business.Organization.Organization;
-import Business.Organization.OrgDirectory;
+import Business.Organization.OrganizationDirectory;
 
 /**
  *
- * @author shrey
+ * @author MyPC1
  */
 public abstract class Enterprise extends Organization {
 
     private EnterpriseType enterpriseType;
-    private OrgDirectory organizationDirectory;
+    private OrganizationDirectory organizationDirectory;
 
-    public OrgDirectory getOrganizationDirectory() {
+    public OrganizationDirectory getOrganizationDirectory() {
         return organizationDirectory;
     }
 
@@ -51,6 +51,6 @@ public abstract class Enterprise extends Organization {
     public Enterprise(String name, EnterpriseType type) {
         super(name);
         this.enterpriseType = type;
-        organizationDirectory = new OrgDirectory();
+        organizationDirectory = new OrganizationDirectory();
     }
 }

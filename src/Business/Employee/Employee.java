@@ -6,8 +6,7 @@ package Business.Employee;
 
 /**
  *
- * @author LENOVO
- * @author anushree_j
+ * @author raunak
  */
 public class Employee {
     

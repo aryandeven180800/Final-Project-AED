@@ -4,7 +4,7 @@
  */
 package userinterface;
 
-import Business.Adopter.AdpDirec;
+import Business.Adopter.AdopterDirectory;
 import Business.Child.ChildDirectory;
 import Business.EcoSystem;
 import Business.DB4OUtil.DB4OUtil;
@@ -12,7 +12,7 @@ import Business.Donor.DonorDirectory;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.Organization;
-import Business.UAcc.UAcc;
+import Business.UserAccount.UserAccount;
 import userinterface.UserRegisteration.SponsorRegistrationJPanel;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
@@ -21,7 +21,7 @@ import userinterface.UserRegisteration.AdopterRegistrationJPanel;
 
 /**
  *
- * @author LENOVO
+ * @author anushree_j
  */
 public class MainJFrame extends javax.swing.JFrame {
 
@@ -30,12 +30,12 @@ public class MainJFrame extends javax.swing.JFrame {
      */
     private EcoSystem system;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
-    UAcc userAccount;
+    UserAccount userAccount;
     Enterprise inEnterprise;
     Organization inOrganization;
     Network networkEmergency;
     private ChildDirectory childdirectory;
-    private AdpDirec adopterdirectory;
+    private AdopterDirectory adopterdirectory;
     private DonorDirectory donorDirectory;
     
 

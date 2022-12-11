@@ -6,12 +6,12 @@
 package userinterface.Adoption.Adoption;
 
 import Business.Adopter.Adopter;
-import Business.Adopter.AdpDirec;
+import Business.Adopter.AdopterDirectory;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.AdoptionOrganization;
 import Business.Organization.Organization;
-import Business.UAcc.UAcc;
+import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
@@ -25,15 +25,15 @@ public class AdoptionMainWorkArea extends javax.swing.JPanel {
      * Creates new form SystemAdminWorkAreaJPanel
      */
     JPanel userProcessContainer;
-    UAcc account;
+    UserAccount account;
     Enterprise enterprise;
     EcoSystem business;
-    AdpDirec adopterdirectory;
+    AdopterDirectory adopterdirectory;
     AdoptionOrganization adoptionOrganization;
     Adopter adopter;
     
     
-    public AdoptionMainWorkArea(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, AdpDirec adopterdirectory) {
+    public AdoptionMainWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AdopterDirectory adopterdirectory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.adopterdirectory = adopterdirectory;
@@ -66,9 +66,9 @@ public class AdoptionMainWorkArea extends javax.swing.JPanel {
         jPanel3 = new javax.swing.JPanel();
         Adoption = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        procadopterrequest = new javax.swing.JLabel();
+        Ado = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        labelfororganization = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         valueLabel = new javax.swing.JLabel();
         rightSystemAdminPanel = new javax.swing.JPanel();
 
@@ -96,26 +96,26 @@ public class AdoptionMainWorkArea extends javax.swing.JPanel {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/manageIcon.png"))); // NOI18N
         Adoption.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 37, -1));
 
-        procadopterrequest.setBackground(new java.awt.Color(255, 204, 153));
-        procadopterrequest.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        procadopterrequest.setText("Process Adopter Request");
-        procadopterrequest.addMouseListener(new java.awt.event.MouseAdapter() {
+        Ado.setBackground(new java.awt.Color(255, 204, 153));
+        Ado.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        Ado.setText("Process Adopter Request");
+        Ado.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                procadopterrequestMousePressed(evt);
+                AdoMousePressed(evt);
             }
         });
-        Adoption.add(procadopterrequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 225, 36));
+        Adoption.add(Ado, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 225, 36));
 
         jPanel3.add(Adoption, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 280, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/manager.png"))); // NOI18N
         jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 180, 200));
 
-        labelfororganization.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
-        labelfororganization.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        labelfororganization.setText("Organization");
-        labelfororganization.setToolTipText("");
-        jPanel3.add(labelfororganization, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 110, 20));
+        jLabel3.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel3.setText("Organization");
+        jLabel3.setToolTipText("");
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 110, 20));
 
         valueLabel.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
         jPanel3.add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 110, 20));
@@ -142,9 +142,9 @@ public class AdoptionMainWorkArea extends javax.swing.JPanel {
         add(systemAdminPanel, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void procadopterrequestMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_procadopterrequestMousePressed
+    private void AdoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdoMousePressed
         adoptionRequest();
-    }//GEN-LAST:event_procadopterrequestMousePressed
+    }//GEN-LAST:event_AdoMousePressed
 
     private void AdoptionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdoptionMousePressed
         // TODO add your handling code here:
@@ -153,12 +153,12 @@ public class AdoptionMainWorkArea extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Ado;
     private javax.swing.JPanel Adoption;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JLabel labelfororganization;
-    private javax.swing.JLabel procadopterrequest;
     private javax.swing.JPanel rightSystemAdminPanel;
     private javax.swing.JPanel systemAdminPanel;
     private javax.swing.JLabel valueLabel;

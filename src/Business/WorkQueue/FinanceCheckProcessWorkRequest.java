@@ -7,7 +7,7 @@ package Business.WorkQueue;
 
 /**
  *
- * @author LENOVO
+ * @author snehaswaroop
  */
 public class FinanceCheckProcessWorkRequest extends WorkRequest {
 

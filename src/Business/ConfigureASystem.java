@@ -4,11 +4,11 @@ package Business;
 
 import Business.Employee.Employee;
 import Business.Role.SystemAdminRole;
-import Business.UAcc.UAcc;
-
+import Business.UserAccount.UserAccount;
+//checking 1
 /**
  *
- * @author LENOVO
+ * @author anushree_j
  */
 public class ConfigureASystem {
     
@@ -25,7 +25,7 @@ public class ConfigureASystem {
         
         Employee employee = system.getEmployeeDirectory().createEmployee("sysadmin");
         
-        UAcc ua = system.getUserAccountDirectory().createUserAccount("sysadmin", "sysadmin", employee, new SystemAdminRole());
+        UserAccount ua = system.getUserAccountDirectory().createUserAccount("sysadmin", "sysadmin", employee, new SystemAdminRole());
         
         return system;
     }

@@ -11,7 +11,7 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.FinanceOrganization;
 import Business.Organization.Organization;
-import Business.UAcc.UAcc;
+import Business.UserAccount.UserAccount;
 import Business.Utils.CommonMail;
 import Business.WorkQueue.DonorWorkRequest;
 import Business.WorkQueue.EducationalHelpWorkRequest;
@@ -22,7 +22,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author anushree_j
+ * @author LENOVO
  */
 public class ViewAndProcessTransactionRecord extends javax.swing.JPanel {
 
@@ -31,14 +31,14 @@ public class ViewAndProcessTransactionRecord extends javax.swing.JPanel {
      */
     
     JPanel userProcessContainer;
-    UAcc account;
+    UserAccount account;
     FinanceOrganization financeOrphanageOrganization;
     Enterprise enterprise;
     EcoSystem business;
     ChildDirectory childdirectory;
     int countApprove=0, countDeny=0, countPending=0; 
     
-    public ViewAndProcessTransactionRecord(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory) {
+    public ViewAndProcessTransactionRecord(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.account = account;

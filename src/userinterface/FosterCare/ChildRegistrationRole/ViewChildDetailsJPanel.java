@@ -27,7 +27,7 @@ import userinterface.DoctorOrg.DoctorJPanel;
 
 /**
  *
- * @author anushree_j
+ * @author LENOVO
  */
 public class ViewChildDetailsJPanel extends javax.swing.JPanel {
 

@@ -25,7 +25,7 @@ import org.jfree.data.general.PieDataset;
 
 /**
  *
- * @author LENOVO
+ * @author shrey
  */
 public class Services extends javax.swing.JPanel {
     

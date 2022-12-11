@@ -6,18 +6,17 @@
 package userinterface.Adoption.FinanceCheck;
 
 import Business.Adopter.Adopter;
-import Business.Adopter.AdpDirec;
+import Business.Adopter.AdopterDirectory;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.FinanceCheckOrganization;
 import Business.Organization.Organization;
-import Business.UAcc.UAcc;
+import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
 /**
  *
- * @author LENOVO
  * @author anushree_j
  */
 public class FinanceWorkArea extends javax.swing.JPanel {
@@ -26,15 +25,15 @@ public class FinanceWorkArea extends javax.swing.JPanel {
      * Creates new form SystemAdminWorkAreaJPanel
      */
     JPanel userProcessContainer;
-    UAcc account;
+    UserAccount account;
     Enterprise enterprise;
     EcoSystem business;
-    AdpDirec adopterdirectory;
+    AdopterDirectory adopterdirectory;
     FinanceCheckOrganization financeOrganization;
     Adopter adopter;
     
     
-    public FinanceWorkArea(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, AdpDirec adopterdirectory) {
+    public FinanceWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AdopterDirectory adopterdirectory) {
         initComponents();
         this.userProcessContainer=userProcessContainer;
         this.adopterdirectory=adopterdirectory;

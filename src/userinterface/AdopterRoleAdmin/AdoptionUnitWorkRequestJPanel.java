@@ -6,16 +6,16 @@
 package userinterface.AdopterRoleAdmin;
 
 import Business.Adopter.Adopter;
-import Business.Adopter.AdpDirec;
+import Business.Adopter.AdopterDirectory;
 import Business.EcoSystem;
 import Business.Employee.Employee;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.AdoptionOrganization;
 import Business.Organization.Organization;
-import Business.Organization.OrgDirectory;
+import Business.Organization.OrganizationDirectory;
 import Business.Role.AdopterRole;
-import Business.UAcc.UAcc;
+import Business.UserAccount.UserAccount;
 import Business.Utils.CommonMail;
 import Business.WorkQueue.AdoptionProcessWorkRequest;
 import Business.WorkQueue.AdopterRegistrationRequest;
@@ -34,13 +34,13 @@ public class AdoptionUnitWorkRequestJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
     private EcoSystem business;
-    private UAcc userAccount;
+    private UserAccount userAccount;
     private Enterprise enterprise;
     private Network network;
-    private OrgDirectory organizationDirectory;
-    AdpDirec adopterdirectory;
+    private OrganizationDirectory organizationDirectory;
+    AdopterDirectory adopterdirectory;
 
-    public AdoptionUnitWorkRequestJPanel(JPanel userProcessContainer, UAcc account, Enterprise enterprise, EcoSystem system, AdpDirec adopterdirectory) {
+    public AdoptionUnitWorkRequestJPanel(JPanel userProcessContainer, UserAccount account, Enterprise enterprise, EcoSystem system, AdopterDirectory adopterdirectory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.userAccount = account;
@@ -53,7 +53,7 @@ public class AdoptionUnitWorkRequestJPanel extends javax.swing.JPanel {
     
     public void populateTable() {
 
-        DefaultTableModel model = (DefaultTableModel) adopworReqtable.getModel();
+        DefaultTableModel model = (DefaultTableModel) adpworkRequest.getModel();
 
         model.setRowCount(0);
 
@@ -85,9 +85,9 @@ public class AdoptionUnitWorkRequestJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        adopworReqtable = new javax.swing.JTable();
-        asgnJButn = new javax.swing.JButton();
-        procJButnclick = new javax.swing.JButton();
+        adpworkRequest = new javax.swing.JTable();
+        assignJButton = new javax.swing.JButton();
+        processJButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         lblRefresh = new javax.swing.JLabel();
@@ -97,9 +97,9 @@ public class AdoptionUnitWorkRequestJPanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(1058, 840));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        adopworReqtable.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        adopworReqtable.setForeground(new java.awt.Color(25, 56, 82));
-        adopworReqtable.setModel(new javax.swing.table.DefaultTableModel(
+        adpworkRequest.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        adpworkRequest.setForeground(new java.awt.Color(25, 56, 82));
+        adpworkRequest.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
@@ -125,29 +125,31 @@ public class AdoptionUnitWorkRequestJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(adopworReqtable);
+        jScrollPane1.setViewportView(adpworkRequest);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 980, 170));
 
-        asgnJButn.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        asgnJButn.setForeground(new java.awt.Color(25, 56, 82));
-        asgnJButn.setText("Assign To Me");
-        asgnJButn.addActionListener(new java.awt.event.ActionListener() {
+        assignJButton.setBackground(new java.awt.Color(255, 255, 255));
+        assignJButton.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        assignJButton.setForeground(new java.awt.Color(25, 56, 82));
+        assignJButton.setText("Assign To Me");
+        assignJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                asgnJButnActionPerformed(evt);
+                assignJButtonActionPerformed(evt);
             }
         });
-        add(asgnJButn, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 430, -1, -1));
+        add(assignJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 430, -1, -1));
 
-        procJButnclick.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        procJButnclick.setForeground(new java.awt.Color(25, 56, 82));
-        procJButnclick.setText("Process");
-        procJButnclick.addActionListener(new java.awt.event.ActionListener() {
+        processJButton.setBackground(new java.awt.Color(255, 255, 255));
+        processJButton.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        processJButton.setForeground(new java.awt.Color(25, 56, 82));
+        processJButton.setText("Process");
+        processJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                procJButnclickActionPerformed(evt);
+                processJButtonActionPerformed(evt);
             }
         });
-        add(procJButnclick, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 430, 120, -1));
+        add(processJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 430, 120, -1));
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(25, 56, 82));
@@ -167,12 +169,12 @@ public class AdoptionUnitWorkRequestJPanel extends javax.swing.JPanel {
         add(lblRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 130, 40, 40));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void asgnJButnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asgnJButnActionPerformed
+    private void assignJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButtonActionPerformed
 
-        int selectedRow = adopworReqtable.getSelectedRow();
+        int selectedRow = adpworkRequest.getSelectedRow();
 
         if (selectedRow >= 0) {
-            WorkRequest request = (WorkRequest) adopworReqtable.getValueAt(selectedRow, 0);
+            WorkRequest request = (WorkRequest) adpworkRequest.getValueAt(selectedRow, 0);
             if ("Completed".equalsIgnoreCase(request.getStatus())) {
                 JOptionPane.showMessageDialog(null, "Request already processed.");
                 return;
@@ -187,14 +189,14 @@ public class AdoptionUnitWorkRequestJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Choose a request to process.");
             return;
         }
-    }//GEN-LAST:event_asgnJButnActionPerformed
+    }//GEN-LAST:event_assignJButtonActionPerformed
 
-    private void procJButnclickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_procJButnclickActionPerformed
+    private void processJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processJButtonActionPerformed
 
-        int selectedRow = adopworReqtable.getSelectedRow();
+        int selectedRow = adpworkRequest.getSelectedRow();
 
         if (selectedRow >= 0) {
-            AdopterRegistrationRequest request = (AdopterRegistrationRequest) adopworReqtable.getValueAt(selectedRow, 0);
+            AdopterRegistrationRequest request = (AdopterRegistrationRequest) adpworkRequest.getValueAt(selectedRow, 0);
             if ("Completed".equalsIgnoreCase(request.getStatus())) {
                 JOptionPane.showMessageDialog(null, "Request already processed.");
                 return;
@@ -202,7 +204,7 @@ public class AdoptionUnitWorkRequestJPanel extends javax.swing.JPanel {
 
                 Organization org = organizationDirectory.createOrganization(request.getName(), Organization.Type.Adopter);
                 Employee emp = org.getEmployeeDirectory().createEmployee(request.getName());
-                UAcc ua1 = org.getUserAccountDirectory().createUserAccount(request.getUserName(), request.getUserPassword(), emp, new AdopterRole());
+                UserAccount ua1 = org.getUserAccountDirectory().createUserAccount(request.getUserName(), request.getUserPassword(), emp, new AdopterRole());
                 Adopter adopter = new Adopter();
                 int uid = adopterdirectory.getAdoptersList().size() + 1;
                 adopter = this.adopterdirectory.addAdopter();
@@ -248,7 +250,7 @@ public class AdoptionUnitWorkRequestJPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "User account has been activated successfully");
             }
         }
-    }//GEN-LAST:event_procJButnclickActionPerformed
+    }//GEN-LAST:event_processJButtonActionPerformed
 
     private void lblRefreshMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRefreshMousePressed
         // TODO add your handling code here:
@@ -257,12 +259,12 @@ public class AdoptionUnitWorkRequestJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable adopworReqtable;
-    private javax.swing.JButton asgnJButn;
+    private javax.swing.JTable adpworkRequest;
+    private javax.swing.JButton assignJButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblRefresh;
-    private javax.swing.JButton procJButnclick;
+    private javax.swing.JButton processJButton;
     // End of variables declaration//GEN-END:variables
 }

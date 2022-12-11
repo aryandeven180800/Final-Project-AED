@@ -5,7 +5,7 @@
  */
 package Business;
 
-import Business.Adopter.AdpDirec;
+import Business.Adopter.AdopterDirectory;
 import Business.Child.ChildDirectory;
 import Business.Donor.DonorDirectory;
 import Business.Enterprise.Enterprise;
@@ -13,19 +13,19 @@ import Business.Network.Network;
 import Business.Organization.Organization;
 import Business.Role.Role;
 import Business.Role.SystemAdminRole;
-import Business.UAcc.UAcc;
+import Business.UserAccount.UserAccount;
 import java.util.ArrayList;
-
+//check
 /**
  *
- * @author LENOVO
+ * @author anushreee_j
  */
 public class EcoSystem extends Organization{
     
     private static EcoSystem business;
     private ArrayList<Network> networkList;
     private ChildDirectory childdirectory;
-    private AdpDirec adopterdirectory;
+    private AdopterDirectory adopterdirectory;
     private DonorDirectory donorDirectory;
     public static EcoSystem getInstance(){
         if(business==null){
@@ -49,7 +49,7 @@ public class EcoSystem extends Organization{
         super(null);
         networkList=new ArrayList<Network>();
         childdirectory = new ChildDirectory();
-        adopterdirectory = new AdpDirec();
+        adopterdirectory = new AdopterDirectory();
         donorDirectory = new DonorDirectory();
       
     }
@@ -66,13 +66,13 @@ public class EcoSystem extends Organization{
          if(this.business!=null){
            for (Network network : business.getNetworkList()) {
             for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
-                for (UAcc ua : enterprise.getUserAccountDirectory().getUserAccountList()) {
+                for (UserAccount ua : enterprise.getUserAccountDirectory().getUserAccountList()) {
                     if (ua.getUsername().equalsIgnoreCase(userName)) {
                         return false;
                     }
                 }
                 for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
-                    for (UAcc ua : organization.getUserAccountDirectory().getUserAccountList()) {
+                    for (UserAccount ua : organization.getUserAccountDirectory().getUserAccountList()) {
                         if (ua.getUsername().equalsIgnoreCase(userName)) {
                             return false;
                         }
@@ -108,11 +108,11 @@ public class EcoSystem extends Organization{
         this.childdirectory = childdirectory;
     }
 
-    public AdpDirec getAdopterdirectory() {
+    public AdopterDirectory getAdopterdirectory() {
         return adopterdirectory;
     }
 
-    public void setAdopterdirectory(AdpDirec adopterdirectory) {
+    public void setAdopterdirectory(AdopterDirectory adopterdirectory) {
         this.adopterdirectory = adopterdirectory;
     }
     

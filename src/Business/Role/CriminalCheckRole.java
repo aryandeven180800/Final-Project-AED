@@ -6,27 +6,27 @@
 package Business.Role;
 
 
-import Business.Adopter.AdpDirec;
+import Business.Adopter.AdopterDirectory;
 import Business.Child.ChildDirectory;
 import Business.Donor.DonorDirectory;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
-import Business.UAcc.UAcc;
+import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
 import userinterface.Adoption.BGCandCriminalCheck.BGCandCriminalWorkArea;
 
 
 /**
  *
- * @author LENOVO
+ * @author Kunjan
  */
 public class CriminalCheckRole extends Role {
 
-    AdpDirec adopterdirectory;
+    AdopterDirectory adopterdirectory;
 
     @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, AdpDirec adopterdirectory, DonorDirectory donorDirectory) {
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, AdopterDirectory adopterdirectory, DonorDirectory donorDirectory) {
         return new BGCandCriminalWorkArea(userProcessContainer,account, organization, enterprise,  business,  adopterdirectory);
     }
     @Override

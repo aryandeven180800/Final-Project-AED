@@ -8,8 +8,7 @@ package Business.Donor;
 
 /**
  *
- * @author LENOVO
- * @author anushree_j
+ * @author Kunjan
  */
 public class Donor {
     

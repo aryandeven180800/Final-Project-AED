@@ -8,13 +8,13 @@ package Business.Organization;
 import Business.Employee.EmployeeDirectory;
 
 import Business.Role.Role;
-import Business.UAcc.UserAccountDirectory;
+import Business.UserAccount.UserAccountDirectory;
 import Business.WorkQueue.WorkQueue;
 import java.util.ArrayList;
 
 /**
  *
- * @author LENOVO
+ * @author raunak
  */
 public abstract class Organization {
 

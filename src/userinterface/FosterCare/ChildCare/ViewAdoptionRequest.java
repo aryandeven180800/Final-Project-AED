@@ -6,7 +6,7 @@
 package userinterface.FosterCare.ChildCare;
 
 import Business.Adopter.Adopter;
-import Business.Adopter.AdpDirec;
+import Business.Adopter.AdopterDirectory;
 import Business.Child.Child;
 import Business.Child.ChildDirectory;
 import Business.EcoSystem;
@@ -15,7 +15,7 @@ import Business.Network.Network;
 import Business.Organization.ChildCareOrganization;
 import Business.Organization.Organization;
 import Business.Role.Role;
-import Business.UAcc.UAcc;
+import Business.UserAccount.UserAccount;
 import Business.Utils.CommonMail;
 import Business.WorkQueue.AdopterStatusCheckWorkRequest;
 import Business.WorkQueue.ChildCareAdoptionWorkRequest;
@@ -26,7 +26,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author LENOVO
+ * @author shrey
  */
 public class ViewAdoptionRequest extends javax.swing.JPanel {
 
@@ -37,18 +37,18 @@ public class ViewAdoptionRequest extends javax.swing.JPanel {
     JPanel userProcessContainer;
     Enterprise enterprise;
     Organization organization;
-    UAcc account;
+    UserAccount account;
     ChildCareOrganization childCareOrganization;
     ChildDirectory childdirectory;
     Child child;
     EcoSystem business;
-    AdpDirec adopterdirectory;
+    AdopterDirectory adopterdirectory;
     Adopter adopter;
     Role roler;
     Network network;
     
     
-    public ViewAdoptionRequest(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, AdpDirec adopterdirectory) {
+    public ViewAdoptionRequest(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, AdopterDirectory adopterdirectory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.account = account;

@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author anushree_j
+ * @author Kunjan
  */
 public class DonorOrganization extends Organization{
     String name;

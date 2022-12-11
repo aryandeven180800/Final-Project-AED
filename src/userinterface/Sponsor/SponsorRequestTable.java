@@ -5,7 +5,7 @@
  */
 package userinterface.Sponsor;
 
-import Business.Adopter.AdpDirec;
+import Business.Adopter.AdopterDirectory;
 import Business.Child.Child;
 import Business.Child.ChildDirectory;
 import Business.Donor.Donor;
@@ -14,7 +14,7 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.DonorOrganization;
 import Business.Organization.Organization;
-import Business.UAcc.UAcc;
+import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -22,12 +22,12 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author anushree_j
+ * @author shrey
  */
 public class SponsorRequestTable extends javax.swing.JPanel {
 
     JPanel userProcessContainer;
-    UAcc account;
+    UserAccount account;
     Enterprise enterprise;
     EcoSystem business;
     DonorOrganization donororganization;
@@ -35,7 +35,7 @@ public class SponsorRequestTable extends javax.swing.JPanel {
     ChildDirectory childdirectory;
     DonorDirectory donorDirectory;
 
-    public SponsorRequestTable(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, AdpDirec adopterdirectory, ChildDirectory childdirectory, DonorDirectory donorDirectory) {
+    public SponsorRequestTable(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AdopterDirectory adopterdirectory, ChildDirectory childdirectory, DonorDirectory donorDirectory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.account = account;

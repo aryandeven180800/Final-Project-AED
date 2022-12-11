@@ -6,14 +6,14 @@
 package userinterface.Adoption.BGCandCriminalCheck;
 
 import Business.Adopter.Adopter;
-import Business.Adopter.AdpDirec;
+import Business.Adopter.AdopterDirectory;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.BackgroundAndCriminalCheckOrganization;
 import Business.Organization.FinanceCheckOrganization;
 import Business.Organization.Organization;
-import Business.UAcc.UAcc;
+import Business.UserAccount.UserAccount;
 import Business.Utils.CommonMail;
 import Business.WorkQueue.AdopterStatusCheckWorkRequest;
 import Business.WorkQueue.BGVProcessWorkRequest;
@@ -25,7 +25,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author LENOVO
+ * @author anushree_j
  */
 public class BGCandCriminalProcess extends javax.swing.JPanel {
 
@@ -33,15 +33,15 @@ public class BGCandCriminalProcess extends javax.swing.JPanel {
      * Creates new form BGCandCriminalProcess
      */
     JPanel userProcessContainer;
-    UAcc account;
+    UserAccount account;
     Enterprise enterprise;
     EcoSystem business;
-    AdpDirec adopterdirectory;
+    AdopterDirectory adopterdirectory;
     BackgroundAndCriminalCheckOrganization bgcOrganization;
     Adopter adopter;
     BGVProcessWorkRequest bgcWorkRequest;
     
-    public BGCandCriminalProcess(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, AdpDirec adopterdirectory, BGVProcessWorkRequest bgcWorkRequest, Adopter adopter) {
+    public BGCandCriminalProcess(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AdopterDirectory adopterdirectory, BGVProcessWorkRequest bgcWorkRequest, Adopter adopter) {
         initComponents();
         this.userProcessContainer=userProcessContainer;
         this.adopterdirectory=adopterdirectory;
@@ -54,13 +54,13 @@ public class BGCandCriminalProcess extends javax.swing.JPanel {
         populateWorkRequest();
         setUserDetailsField();
         
-        nametext.setEnabled(false);
-        agetext.setEnabled(false);
-        ssntextbox.setEnabled(false);
-        maleclcikdrop.setEnabled(false);
-        femaleclickdrop.setEnabled(false);
-        incomeforbackcheck.setEnabled(false);
-        emailidforback.setEnabled(false);
+        txtName.setEnabled(false);
+        txtAge.setEnabled(false);
+        txtSSN.setEnabled(false);
+        rdbMale.setEnabled(false);
+        rdbFemale.setEnabled(false);
+        txtIncome.setEnabled(false);
+        txtEmail.setEnabled(false);
     }
 
     /**
@@ -72,79 +72,79 @@ public class BGCandCriminalProcess extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        backcrimecheckprocessing = new javax.swing.JLabel();
-        adopterlabeldetials = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         lblEmail = new javax.swing.JLabel();
-        namelabel = new javax.swing.JLabel();
-        agelabel = new javax.swing.JLabel();
-        ssnlabell = new javax.swing.JLabel();
-        genderlabel = new javax.swing.JLabel();
-        labelincome = new javax.swing.JLabel();
-        emailidforback = new javax.swing.JTextField();
-        nametext = new javax.swing.JTextField();
-        agetext = new javax.swing.JTextField();
-        ssntextbox = new javax.swing.JTextField();
-        incomeforbackcheck = new javax.swing.JTextField();
-        maleclcikdrop = new javax.swing.JRadioButton();
-        femaleclickdrop = new javax.swing.JRadioButton();
-        tablebackandcrime = new javax.swing.JScrollPane();
+        lblName = new javax.swing.JLabel();
+        lblAge = new javax.swing.JLabel();
+        lblSSN = new javax.swing.JLabel();
+        lblGender = new javax.swing.JLabel();
+        lblIncome = new javax.swing.JLabel();
+        txtEmail = new javax.swing.JTextField();
+        txtName = new javax.swing.JTextField();
+        txtAge = new javax.swing.JTextField();
+        txtSSN = new javax.swing.JTextField();
+        txtIncome = new javax.swing.JTextField();
+        rdbMale = new javax.swing.JRadioButton();
+        rdbFemale = new javax.swing.JRadioButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
         tblRequest = new javax.swing.JTable();
-        remarks = new javax.swing.JLabel();
-        textforremarks = new javax.swing.JTextField();
-        approvebutton = new javax.swing.JButton();
-        deny = new javax.swing.JButton();
+        lblRemarks = new javax.swing.JLabel();
+        txtRemarks = new javax.swing.JTextField();
+        btnApprove = new javax.swing.JButton();
+        btnDeny = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        backcrimecheckprocessing.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        backcrimecheckprocessing.setText("BACKGROUND AND CRIMINAL CHECK PROCESS");
-        add(backcrimecheckprocessing, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, -1, -1));
+        jLabel1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel1.setText("BACKGROUND AND CRIMINAL CHECK PROCESS");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, -1, -1));
 
-        adopterlabeldetials.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
-        adopterlabeldetials.setText("ADOPTER DETAILS");
-        add(adopterlabeldetials, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 150, 20));
+        jLabel2.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
+        jLabel2.setText("ADOPTER DETAILS");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 150, 20));
 
         lblEmail.setText("Email ID");
         add(lblEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 210, 90, 20));
 
-        namelabel.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
-        namelabel.setText("Name");
-        add(namelabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 110, 20));
+        lblName.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
+        lblName.setText("Name");
+        add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 110, 20));
 
-        agelabel.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
-        agelabel.setText("Age");
-        add(agelabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 110, 20));
+        lblAge.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
+        lblAge.setText("Age");
+        add(lblAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 110, 20));
 
-        ssnlabell.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
-        ssnlabell.setText("SSN");
-        add(ssnlabell, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 110, 20));
+        lblSSN.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
+        lblSSN.setText("SSN");
+        add(lblSSN, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 110, 20));
 
-        genderlabel.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
-        genderlabel.setText("Gender");
-        add(genderlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 130, 110, 20));
+        lblGender.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
+        lblGender.setText("Gender");
+        add(lblGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 130, 110, 20));
 
-        labelincome.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
-        labelincome.setText("Income");
-        add(labelincome, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 170, 90, 20));
-        add(emailidforback, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 210, 180, -1));
+        lblIncome.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
+        lblIncome.setText("Income");
+        add(lblIncome, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 170, 90, 20));
+        add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 210, 180, -1));
 
-        nametext.addActionListener(new java.awt.event.ActionListener() {
+        txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nametextActionPerformed(evt);
+                txtNameActionPerformed(evt);
             }
         });
-        add(nametext, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 190, -1));
-        add(agetext, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 190, -1));
-        add(ssntextbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 190, -1));
-        add(incomeforbackcheck, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 170, 180, 30));
+        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 190, -1));
+        add(txtAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 190, -1));
+        add(txtSSN, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 190, -1));
+        add(txtIncome, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 170, 180, 30));
 
-        maleclcikdrop.setText("Male");
-        add(maleclcikdrop, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 130, 70, -1));
+        rdbMale.setText("Male");
+        add(rdbMale, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 130, 70, -1));
 
-        femaleclickdrop.setText("Female");
-        add(femaleclickdrop, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 130, -1, -1));
+        rdbFemale.setText("Female");
+        add(rdbFemale, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 130, -1, -1));
 
         tblRequest.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         tblRequest.setModel(new javax.swing.table.DefaultTableModel(
@@ -166,45 +166,45 @@ public class BGCandCriminalProcess extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        tablebackandcrime.setViewportView(tblRequest);
+        jScrollPane1.setViewportView(tblRequest);
 
-        add(tablebackandcrime, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, 850, 160));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, 850, 160));
 
-        remarks.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
-        remarks.setText("Remarks");
-        add(remarks, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 620, 90, -1));
+        lblRemarks.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
+        lblRemarks.setText("Remarks");
+        add(lblRemarks, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 620, 90, -1));
 
-        textforremarks.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
-        textforremarks.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(textforremarks, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 570, 210, 70));
+        txtRemarks.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
+        txtRemarks.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(txtRemarks, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 570, 210, 70));
 
-        approvebutton.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
-        approvebutton.setText("Approve");
-        approvebutton.addActionListener(new java.awt.event.ActionListener() {
+        btnApprove.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
+        btnApprove.setText("Approve");
+        btnApprove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                approvebuttonActionPerformed(evt);
+                btnApproveActionPerformed(evt);
             }
         });
-        add(approvebutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 610, 140, -1));
+        add(btnApprove, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 610, 140, -1));
 
-        deny.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
-        deny.setText("Deny");
-        deny.addActionListener(new java.awt.event.ActionListener() {
+        btnDeny.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
+        btnDeny.setText("Deny");
+        btnDeny.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                denyActionPerformed(evt);
+                btnDenyActionPerformed(evt);
             }
         });
-        add(deny, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 610, 130, -1));
+        add(btnDeny, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 610, 130, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/search.png"))); // NOI18N
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, 830, 610));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void nametextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nametextActionPerformed
+    private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nametextActionPerformed
+    }//GEN-LAST:event_txtNameActionPerformed
 
-    private void approvebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_approvebuttonActionPerformed
+    private void btnApproveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApproveActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblRequest.getSelectedRow();
         if (selectedRow < 0) {
@@ -223,7 +223,7 @@ public class BGCandCriminalProcess extends javax.swing.JPanel {
 
                 BGVProcessWorkRequest request = (BGVProcessWorkRequest) tblRequest.getValueAt(selectedRow, 0);
                 request.setStatus("Approved");
-                request.setComment(textforremarks.getText());
+                request.setComment(txtRemarks.getText());
                 request.setUserId(adopter.getUserId());
                 request.setBgcStatus("Approved");
                 populateWorkRequest();
@@ -269,11 +269,11 @@ public class BGCandCriminalProcess extends javax.swing.JPanel {
             } else {
                 JOptionPane.showMessageDialog(null, "Please select work request assigned to you");
             }
-            textforremarks.setText("");
+            txtRemarks.setText("");
         }
-    }//GEN-LAST:event_approvebuttonActionPerformed
+    }//GEN-LAST:event_btnApproveActionPerformed
 
-    private void denyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_denyActionPerformed
+    private void btnDenyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDenyActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblRequest.getSelectedRow();
         if (selectedRow < 0) {
@@ -291,7 +291,7 @@ public class BGCandCriminalProcess extends javax.swing.JPanel {
                 BGVProcessWorkRequest request = (BGVProcessWorkRequest) tblRequest.getValueAt(selectedRow, 0);
 
                 request.setStatus("Denied");
-                request.setComment(textforremarks.getText());
+                request.setComment(txtRemarks.getText());
                 request.setSender(account);
                 request.setUserId(adopter.getUserId());
                 request.setBgcStatus("Denied");
@@ -316,9 +316,9 @@ public class BGCandCriminalProcess extends javax.swing.JPanel {
             } else {
                 JOptionPane.showMessageDialog(null, "Please select work request assigned to you");
             }
-            textforremarks.setText("");
+            txtRemarks.setText("");
         }
-    }//GEN-LAST:event_denyActionPerformed
+    }//GEN-LAST:event_btnDenyActionPerformed
     
     public void populateWorkRequest() {
 
@@ -341,42 +341,42 @@ public class BGCandCriminalProcess extends javax.swing.JPanel {
     }
 
     public void setUserDetailsField() {
-        agetext.setText(String.valueOf(adopter.getAge()));
-        emailidforback.setText(adopter.getEmailId());
-        incomeforbackcheck.setText(String.valueOf(adopter.getAnnualIncome()));
-        nametext.setText(adopter.getName());
-        ssntextbox.setText(adopter.getSsn());
+        txtAge.setText(String.valueOf(adopter.getAge()));
+        txtEmail.setText(adopter.getEmailId());
+        txtIncome.setText(String.valueOf(adopter.getAnnualIncome()));
+        txtName.setText(adopter.getName());
+        txtSSN.setText(adopter.getSsn());
         if (adopter.getGender().equalsIgnoreCase("male")) {
-            maleclcikdrop.setSelected(true);
+            rdbMale.setSelected(true);
         } else {
-            femaleclickdrop.setSelected(true);
+            rdbFemale.setSelected(true);
         }
     }
 
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel adopterlabeldetials;
-    private javax.swing.JLabel agelabel;
-    private javax.swing.JTextField agetext;
-    private javax.swing.JButton approvebutton;
-    private javax.swing.JLabel backcrimecheckprocessing;
-    private javax.swing.JButton deny;
-    private javax.swing.JTextField emailidforback;
-    private javax.swing.JRadioButton femaleclickdrop;
-    private javax.swing.JLabel genderlabel;
-    private javax.swing.JTextField incomeforbackcheck;
+    private javax.swing.JButton btnApprove;
+    private javax.swing.JButton btnDeny;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel labelincome;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblAge;
     private javax.swing.JLabel lblEmail;
-    private javax.swing.JRadioButton maleclcikdrop;
-    private javax.swing.JLabel namelabel;
-    private javax.swing.JTextField nametext;
-    private javax.swing.JLabel remarks;
-    private javax.swing.JLabel ssnlabell;
-    private javax.swing.JTextField ssntextbox;
-    private javax.swing.JScrollPane tablebackandcrime;
+    private javax.swing.JLabel lblGender;
+    private javax.swing.JLabel lblIncome;
+    private javax.swing.JLabel lblName;
+    private javax.swing.JLabel lblRemarks;
+    private javax.swing.JLabel lblSSN;
+    private javax.swing.JRadioButton rdbFemale;
+    private javax.swing.JRadioButton rdbMale;
     private javax.swing.JTable tblRequest;
-    private javax.swing.JTextField textforremarks;
+    private javax.swing.JTextField txtAge;
+    private javax.swing.JTextField txtEmail;
+    private javax.swing.JTextField txtIncome;
+    private javax.swing.JTextField txtName;
+    private javax.swing.JTextField txtRemarks;
+    private javax.swing.JTextField txtSSN;
     // End of variables declaration//GEN-END:variables
 }

@@ -4,18 +4,18 @@
  */
 package Business.WorkQueue;
 
-import Business.UAcc.UAcc;
+import Business.UserAccount.UserAccount;
 import java.util.Date;
 
 /**
  *
- * @author LENOVO
+ * @author raunak
  */
 public abstract class WorkRequest {
 
     private String message;
-    private UAcc sender;
-    private UAcc receiver;
+    private UserAccount sender;
+    private UserAccount receiver;
     private String status;
     private Date requestDate;
     private Date resolveDate;
@@ -52,19 +52,19 @@ public abstract class WorkRequest {
         this.message = message;
     }
 
-    public UAcc getSender() {
+    public UserAccount getSender() {
         return sender;
     }
 
-    public void setSender(UAcc sender) {
+    public void setSender(UserAccount sender) {
         this.sender = sender;
     }
 
-    public UAcc getReceiver() {
+    public UserAccount getReceiver() {
         return receiver;
     }
 
-    public void setReceiver(UAcc receiver) {
+    public void setReceiver(UserAccount receiver) {
         this.receiver = receiver;
     }
 

@@ -12,7 +12,7 @@ import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.Organization;
 import Business.Organization.PharmacistOrganization;
-import Business.UAcc.UAcc;
+import Business.UserAccount.UserAccount;
 import Business.WorkQueue.MedicalHelpWorkRequest;
 import Business.WorkQueue.PharmacistWorkRequest;
 import java.awt.CardLayout;
@@ -22,7 +22,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author shrey
+ * @author anushree_j
  */
 public class DoctorPrescibeMedicine extends javax.swing.JPanel {
 
@@ -31,7 +31,7 @@ public class DoctorPrescibeMedicine extends javax.swing.JPanel {
      */
     private JPanel userProcessContainer;
     private Enterprise enterprise;
-    private UAcc userAccount;
+    private UserAccount userAccount;
     private ChildDirectory childdirectory;
     private Child child;
     private  MedicalHelpWorkRequest request;
@@ -39,7 +39,7 @@ public class DoctorPrescibeMedicine extends javax.swing.JPanel {
     Network network;
     
     
-    public DoctorPrescibeMedicine(JPanel userProcessContainer, UAcc userAccount, Enterprise enterprise, Child child, ChildDirectory childdirectory, MedicalHelpWorkRequest request, EcoSystem business) {
+    public DoctorPrescibeMedicine(JPanel userProcessContainer, UserAccount userAccount, Enterprise enterprise, Child child, ChildDirectory childdirectory, MedicalHelpWorkRequest request, EcoSystem business) {
         initComponents();
         initComponents();
         this.userProcessContainer = userProcessContainer;

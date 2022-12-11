@@ -7,7 +7,7 @@ package Business.WorkQueue;
 
 /**
  *
- * @author anushree_j
+ * @author snehaswaroop
  */
 public class AdopterStatusCheckWorkRequest extends WorkRequest {
      private String bgcStatus;

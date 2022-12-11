@@ -12,7 +12,7 @@ import Business.Organization.Organization;
 
 /**
  *
- * @author anushree_j
+ * @author Kunjan
  */
 public class DonorRegistrationRequest extends WorkRequest{
     

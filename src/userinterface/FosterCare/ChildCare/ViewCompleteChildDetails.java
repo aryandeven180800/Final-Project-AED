@@ -12,7 +12,7 @@ import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.ChildCareOrganization;
 import Business.Organization.Organization;
-import Business.UAcc.UAcc;
+import Business.UserAccount.UserAccount;
 import Business.WorkQueue.MedicalHelpWorkRequest;
 import Business.WorkQueue.EducationalHelpWorkRequest;
 import Business.WorkQueue.WorkRequest;
@@ -28,7 +28,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author LENOVO
+ * @author shrey
  */
 public class ViewCompleteChildDetails extends javax.swing.JPanel {
 
@@ -37,14 +37,14 @@ public class ViewCompleteChildDetails extends javax.swing.JPanel {
      */
     JPanel userProcessContainer;
     Child child;
-    UAcc account;
+    UserAccount account;
     ChildCareOrganization organization;
     Enterprise enterprise;
     EcoSystem business;
     ChildDirectory childdirectory;
     Network network;
 	
-    ViewCompleteChildDetails(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, Child child,boolean flag) {
+    ViewCompleteChildDetails(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, Child child,boolean flag) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.child = child;

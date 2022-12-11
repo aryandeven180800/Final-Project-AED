@@ -5,7 +5,7 @@
  */
 package userinterface.Sponsor;
 
-import Business.Adopter.AdpDirec;
+import Business.Adopter.AdopterDirectory;
 import Business.Child.ChildDirectory;
 import Business.Donor.Donor;
 import Business.Donor.DonorDirectory;
@@ -13,7 +13,7 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.DonorOrganization;
 import Business.Organization.Organization;
-import Business.UAcc.UAcc;
+import Business.UserAccount.UserAccount;
 import Business.WorkQueue.DonorWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import javax.swing.JPanel;
@@ -29,7 +29,7 @@ public class SponsorStatus extends javax.swing.JPanel {
      * Creates new form DonorStatus
      */
     JPanel userProcessContainer;
-    UAcc account;
+    UserAccount account;
     Enterprise enterprise;
     EcoSystem business;
     DonorOrganization donororganization;
@@ -37,7 +37,7 @@ public class SponsorStatus extends javax.swing.JPanel {
     ChildDirectory childdirectory;
     DonorDirectory donorDirectory;
     
-    public SponsorStatus(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, AdpDirec adopterdirectory, ChildDirectory childdirectory, DonorDirectory donorDirectory) {
+    public SponsorStatus(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AdopterDirectory adopterdirectory, ChildDirectory childdirectory, DonorDirectory donorDirectory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.account = account;

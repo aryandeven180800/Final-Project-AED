@@ -7,7 +7,7 @@ package Business.WorkQueue;
 
 /**
  *
- * @author LENOVO
+ * @author raunak
  */
 public class PharmacistWorkRequest extends WorkRequest {
     

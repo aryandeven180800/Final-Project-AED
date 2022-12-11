@@ -25,7 +25,7 @@ import javax.swing.event.DocumentListener;
 
 /**
  *
- * @author anushree_j
+ * @author LENOVO
  */
 public class SponsorRegistrationJPanel extends javax.swing.JPanel {
 
@@ -384,7 +384,7 @@ public class SponsorRegistrationJPanel extends javax.swing.JPanel {
             registrationRequest.setUserContact(txtContact.getText());
             registrationRequest.setStatus("Request access");
             registrationRequest.setAnnualIncome(txtIncome.getText());
-            String subject = "Sponsorer Registeration";
+            String subject = "Sponsorer Regisration";
             String content = "Thank you for registering with us. Your account will be activated within 24 hours. We will keep you posted with your status.";
             CommonMail.sendEmailMessage(txtEmail.getText(), subject, content);
             for (Network network1 : system.getNetworkList()) {

@@ -5,14 +5,14 @@
  */
 package userinterface.AdministrativeRole;
 
-import Business.Adopter.AdpDirec;
+import Business.Adopter.AdopterDirectory;
 import Business.Child.ChildDirectory;
 import Business.Donor.DonorDirectory;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.Organization;
-import Business.UAcc.UAcc;
+import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 import userinterface.AdopterRoleAdmin.AdoptionUnitWorkRequestJPanel;
@@ -20,7 +20,7 @@ import userinterface.FundingRoleAdmin.FundingUnitWorkRequestJPanel;
 
 /**
  *
- * @author LENOVO
+ * @author anushree_j
  */
 public class AdminWorkAreaJPanel extends javax.swing.JPanel {
 
@@ -31,13 +31,13 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
     EcoSystem business;
     Enterprise enterprise;
     Network network;
-    UAcc account;
+    UserAccount account;
     Organization organization;
-    AdpDirec adopterdirectory;
+    AdopterDirectory adopterdirectory;
     ChildDirectory childdirectory;
     DonorDirectory donorDirectory;
 
-    public AdminWorkAreaJPanel(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, AdpDirec adopterdirectory, DonorDirectory donorDirectory) {
+    public AdminWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, AdopterDirectory adopterdirectory, DonorDirectory donorDirectory) {
         initComponents();
         System.out.println("here");
         this.userProcessContainer = userProcessContainer;
@@ -101,18 +101,18 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         systemAdminPanel = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         ManageOrg = new javax.swing.JPanel();
-        ORGANIZATIONMAN = new javax.swing.JLabel();
+        manageOrganisation = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         manageEmp = new javax.swing.JPanel();
-        EMPLOYEEMAN = new javax.swing.JLabel();
+        manageEmployee = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         manageUserPanel = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        USERMAN = new javax.swing.JLabel();
+        manageUser = new javax.swing.JLabel();
         manageRequestPanel = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        REQUESTMAN = new javax.swing.JLabel();
-        jLabel = new javax.swing.JLabel();
+        ManageRequest = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         valueLabel = new javax.swing.JLabel();
         rightSystemAdminPanel = new javax.swing.JPanel();
@@ -136,12 +136,12 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        ORGANIZATIONMAN.setBackground(new java.awt.Color(255, 204, 153));
-        ORGANIZATIONMAN.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        ORGANIZATIONMAN.setText("Manage Organisation");
-        ORGANIZATIONMAN.addMouseListener(new java.awt.event.MouseAdapter() {
+        manageOrganisation.setBackground(new java.awt.Color(255, 204, 153));
+        manageOrganisation.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        manageOrganisation.setText("Manage Organisation");
+        manageOrganisation.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                ORGANIZATIONMANMousePressed(evt);
+                manageOrganisationMousePressed(evt);
             }
         });
 
@@ -155,7 +155,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ORGANIZATIONMAN, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(manageOrganisation, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         ManageOrgLayout.setVerticalGroup(
             ManageOrgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -163,7 +163,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(ManageOrgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ORGANIZATIONMAN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(manageOrganisation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -177,13 +177,13 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        EMPLOYEEMAN.setBackground(new java.awt.Color(255, 204, 153));
-        EMPLOYEEMAN.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        EMPLOYEEMAN.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        EMPLOYEEMAN.setText("Manage Employee");
-        EMPLOYEEMAN.addMouseListener(new java.awt.event.MouseAdapter() {
+        manageEmployee.setBackground(new java.awt.Color(255, 204, 153));
+        manageEmployee.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        manageEmployee.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        manageEmployee.setText("Manage Employee");
+        manageEmployee.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                EMPLOYEEMANMousePressed(evt);
+                manageEmployeeMousePressed(evt);
             }
         });
 
@@ -197,7 +197,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(EMPLOYEEMAN, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(manageEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         manageEmpLayout.setVerticalGroup(
             manageEmpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -206,7 +206,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
                 .addGroup(manageEmpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, manageEmpLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(EMPLOYEEMAN, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(manageEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -223,11 +223,11 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/request.png"))); // NOI18N
 
-        USERMAN.setBackground(new java.awt.Color(255, 204, 153));
-        USERMAN.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        USERMAN.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        USERMAN.setText("Manage User");
-        USERMAN.setPreferredSize(new java.awt.Dimension(115, 16));
+        manageUser.setBackground(new java.awt.Color(255, 204, 153));
+        manageUser.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        manageUser.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        manageUser.setText("Manage User");
+        manageUser.setPreferredSize(new java.awt.Dimension(115, 16));
 
         javax.swing.GroupLayout manageUserPanelLayout = new javax.swing.GroupLayout(manageUserPanel);
         manageUserPanel.setLayout(manageUserPanelLayout);
@@ -237,7 +237,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(USERMAN, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(manageUser, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         manageUserPanelLayout.setVerticalGroup(
@@ -248,7 +248,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, manageUserPanelLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(USERMAN, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(manageUser, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanel3.add(manageUserPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 280, 40));
@@ -262,12 +262,12 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/statusIcon.png"))); // NOI18N
 
-        REQUESTMAN.setBackground(new java.awt.Color(255, 204, 153));
-        REQUESTMAN.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        REQUESTMAN.setText("Manage Request");
-        REQUESTMAN.addMouseListener(new java.awt.event.MouseAdapter() {
+        ManageRequest.setBackground(new java.awt.Color(255, 204, 153));
+        ManageRequest.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        ManageRequest.setText("Manage Request");
+        ManageRequest.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                REQUESTMANMousePressed(evt);
+                ManageRequestMousePressed(evt);
             }
         });
 
@@ -279,13 +279,13 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
                 .addGap(7, 7, 7)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(REQUESTMAN, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ManageRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         manageRequestPanelLayout.setVerticalGroup(
             manageRequestPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(manageRequestPanelLayout.createSequentialGroup()
-                .addComponent(REQUESTMAN, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ManageRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(manageRequestPanelLayout.createSequentialGroup()
                 .addContainerGap()
@@ -295,9 +295,8 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
 
         jPanel3.add(manageRequestPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 280, 40));
 
-        jLabel.setBackground(new java.awt.Color(153, 255, 153));
-        jLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/systemadminlogo.png"))); // NOI18N
-        jPanel3.add(jLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 210, 190));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/systemadminlogo.png"))); // NOI18N
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 210, 190));
 
         jLabel6.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -329,18 +328,18 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         add(systemAdminPanel, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ORGANIZATIONMANMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ORGANIZATIONMANMousePressed
+    private void manageOrganisationMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manageOrganisationMousePressed
         manageOrganisation();
-    }//GEN-LAST:event_ORGANIZATIONMANMousePressed
+    }//GEN-LAST:event_manageOrganisationMousePressed
 
     private void ManageOrgMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageOrgMousePressed
         // TODO add your handling code here:
         manageOrganisation();
     }//GEN-LAST:event_ManageOrgMousePressed
 
-    private void EMPLOYEEMANMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EMPLOYEEMANMousePressed
+    private void manageEmployeeMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manageEmployeeMousePressed
         manageEmployee();
-    }//GEN-LAST:event_EMPLOYEEMANMousePressed
+    }//GEN-LAST:event_manageEmployeeMousePressed
 
     private void manageEmpMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manageEmpMousePressed
         // TODO add your handling code here:
@@ -351,10 +350,10 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         manageUser();
     }//GEN-LAST:event_manageUserPanelMousePressed
 
-    private void REQUESTMANMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_REQUESTMANMousePressed
+    private void ManageRequestMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageRequestMousePressed
         // TODO add your handling code here:
         manageRequests();
-    }//GEN-LAST:event_REQUESTMANMousePressed
+    }//GEN-LAST:event_ManageRequestMousePressed
 
     private void manageRequestPanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manageRequestPanelMousePressed
         // TODO add your handling code here:
@@ -363,20 +362,20 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel EMPLOYEEMAN;
     private javax.swing.JPanel ManageOrg;
-    private javax.swing.JLabel ORGANIZATIONMAN;
-    private javax.swing.JLabel REQUESTMAN;
-    private javax.swing.JLabel USERMAN;
-    private javax.swing.JLabel jLabel;
+    private javax.swing.JLabel ManageRequest;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel manageEmp;
+    private javax.swing.JLabel manageEmployee;
+    private javax.swing.JLabel manageOrganisation;
     private javax.swing.JPanel manageRequestPanel;
+    private javax.swing.JLabel manageUser;
     private javax.swing.JPanel manageUserPanel;
     private javax.swing.JPanel rightSystemAdminPanel;
     private javax.swing.JPanel systemAdminPanel;

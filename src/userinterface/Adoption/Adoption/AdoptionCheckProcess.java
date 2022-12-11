@@ -6,7 +6,7 @@
 package userinterface.Adoption.Adoption;
 
 import Business.Adopter.Adopter;
-import Business.Adopter.AdpDirec;
+import Business.Adopter.AdopterDirectory;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
@@ -14,7 +14,7 @@ import Business.Organization.AdopterOrganization;
 import Business.Organization.AdoptionOrganization;
 import Business.Organization.BackgroundAndCriminalCheckOrganization;
 import Business.Organization.Organization;
-import Business.UAcc.UAcc;
+import Business.UserAccount.UserAccount;
 import Business.Utils.CommonMail;
 import Business.WorkQueue.AdopterStatusCheckWorkRequest;
 import Business.WorkQueue.AdoptionProcessWorkRequest;
@@ -35,15 +35,15 @@ public class AdoptionCheckProcess extends javax.swing.JPanel {
      */
     
     JPanel userProcessContainer;
-    UAcc account;
+    UserAccount account;
     Enterprise enterprise;
     EcoSystem business;
-    AdpDirec adopterdirectory;
+    AdopterDirectory adopterdirectory;
     AdoptionOrganization adoptionOrganization;
     Adopter adopter;
     AdoptionProcessWorkRequest adoptionWorkRequest;
     
-    public AdoptionCheckProcess(JPanel userProcessContainer,UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, AdpDirec adopterdirectory, AdoptionProcessWorkRequest adoptionWorkRequest, Adopter adopter) {
+    public AdoptionCheckProcess(JPanel userProcessContainer,UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AdopterDirectory adopterdirectory, AdoptionProcessWorkRequest adoptionWorkRequest, Adopter adopter) {
         initComponents();
         initComponents();
         this.userProcessContainer=userProcessContainer;
@@ -56,31 +56,31 @@ public class AdoptionCheckProcess extends javax.swing.JPanel {
         this.adoptionWorkRequest = adoptionWorkRequest;
         populateWorkRequest();
         setUserDetailsField();
-        textname.setEnabled(false);
-        agetext.setEnabled(false);
-        emailtext.setEnabled(false);
-        incometext.setEnabled(false);
-        maleclick.setEnabled(false);
-        femaleclick.setEnabled(false);
-        ssntext.setEnabled(false);
+        txtName.setEnabled(false);
+        txtAge.setEnabled(false);
+        txtEmail.setEnabled(false);
+        txtIncome.setEnabled(false);
+        rdbMale.setEnabled(false);
+        rdbFemale.setEnabled(false);
+        txtSSN.setEnabled(false);
     }
     
     public void setUserDetailsField() {
-        agetext.setText(String.valueOf(adopter.getAge()));
-        emailtext.setText(adopter.getEmailId());
-        incometext.setText(String.valueOf(adopter.getAnnualIncome()));
-        textname.setText(adopter.getName());
-        ssntext.setText(adopter.getSsn());
+        txtAge.setText(String.valueOf(adopter.getAge()));
+        txtEmail.setText(adopter.getEmailId());
+        txtIncome.setText(String.valueOf(adopter.getAnnualIncome()));
+        txtName.setText(adopter.getName());
+        txtSSN.setText(adopter.getSsn());
         if (adopter.getGender().equalsIgnoreCase("Male")) {
-            maleclick.setSelected(true);
+            rdbMale.setSelected(true);
         } else {
-            femaleclick.setSelected(true);
+            rdbFemale.setSelected(true);
         }
     }
 
     public void populateWorkRequest() {
 
-        DefaultTableModel model = (DefaultTableModel) tableforadpprocess.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblInitiateBCG.getModel();
         model.setRowCount(0);
 
         for (WorkRequest request : adoptionOrganization.getWorkQueue().getWorkRequestList()) {
@@ -108,91 +108,91 @@ public class AdoptionCheckProcess extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        adoptionprocess = new javax.swing.JLabel();
-        labelAdopDetailmain = new javax.swing.JLabel();
-        namelabel = new javax.swing.JLabel();
-        agelabe = new javax.swing.JLabel();
-        genlab = new javax.swing.JLabel();
-        ssnlab = new javax.swing.JLabel();
-        incomelab = new javax.swing.JLabel();
-        emaillab = new javax.swing.JLabel();
-        emailtext = new javax.swing.JTextField();
-        textname = new javax.swing.JTextField();
-        agetext = new javax.swing.JTextField();
-        ssntext = new javax.swing.JTextField();
-        incometext = new javax.swing.JTextField();
-        maleclick = new javax.swing.JRadioButton();
-        femaleclick = new javax.swing.JRadioButton();
+        lblHeading = new javax.swing.JLabel();
+        lblAdopterDetails = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        txtEmail = new javax.swing.JTextField();
+        txtName = new javax.swing.JTextField();
+        txtAge = new javax.swing.JTextField();
+        txtSSN = new javax.swing.JTextField();
+        txtIncome = new javax.swing.JTextField();
+        rdbMale = new javax.swing.JRadioButton();
+        rdbFemale = new javax.swing.JRadioButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tableforadpprocess = new javax.swing.JTable();
-        buttonbcginitiate = new javax.swing.JButton();
+        tblInitiateBCG = new javax.swing.JTable();
+        btnInitiateBCG = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         lblRefresh = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        adoptionprocess.setFont(new java.awt.Font("SansSerif", 1, 20)); // NOI18N
-        adoptionprocess.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        adoptionprocess.setText("ADOPTION PROCESS");
-        add(adoptionprocess, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 20, 460, 30));
+        lblHeading.setFont(new java.awt.Font("SansSerif", 1, 20)); // NOI18N
+        lblHeading.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblHeading.setText("ADOPTION PROCESS");
+        add(lblHeading, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 20, 460, 30));
 
-        labelAdopDetailmain.setFont(new java.awt.Font("Lucida Grande", 1, 20)); // NOI18N
-        labelAdopDetailmain.setText("Adopter Details");
-        add(labelAdopDetailmain, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 110, 180, 20));
+        lblAdopterDetails.setFont(new java.awt.Font("Lucida Grande", 1, 20)); // NOI18N
+        lblAdopterDetails.setText("Adopter Details");
+        add(lblAdopterDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 110, 180, 20));
 
-        namelabel.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        namelabel.setText("Name");
-        add(namelabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 150, 100, 20));
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jLabel1.setText("Name");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 150, 100, 20));
 
-        agelabe.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        agelabe.setText("Age");
-        add(agelabe, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, 80, -1));
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jLabel2.setText("Age");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, 80, -1));
 
-        genlab.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        genlab.setText("Gender");
-        add(genlab, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 230, 60, -1));
+        jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jLabel3.setText("Gender");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 230, 60, -1));
 
-        ssnlab.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        ssnlab.setText("SSN");
-        add(ssnlab, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 270, 50, 20));
+        jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jLabel4.setText("SSN");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 270, 50, 20));
 
-        incomelab.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        incomelab.setText("Income");
-        add(incomelab, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, 70, -1));
+        jLabel5.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jLabel5.setText("Income");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, 70, -1));
 
-        emaillab.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        emaillab.setText("Email ID");
-        add(emaillab, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 350, 70, -1));
+        jLabel6.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jLabel6.setText("Email ID");
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 350, 70, -1));
 
-        emailtext.setEditable(false);
-        add(emailtext, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 200, -1));
+        txtEmail.setEditable(false);
+        add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 200, -1));
 
-        textname.setEditable(false);
-        add(textname, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 150, 210, -1));
+        txtName.setEditable(false);
+        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 150, 210, -1));
 
-        agetext.setEditable(false);
-        add(agetext, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 190, 210, 30));
+        txtAge.setEditable(false);
+        add(txtAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 190, 210, 30));
 
-        ssntext.setEditable(false);
-        add(ssntext, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 270, 200, -1));
+        txtSSN.setEditable(false);
+        add(txtSSN, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 270, 200, -1));
 
-        incometext.setEditable(false);
-        add(incometext, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 310, 200, -1));
+        txtIncome.setEditable(false);
+        add(txtIncome, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 310, 200, -1));
 
-        maleclick.setText("Male");
-        maleclick.addActionListener(new java.awt.event.ActionListener() {
+        rdbMale.setText("Male");
+        rdbMale.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                maleclickActionPerformed(evt);
+                rdbMaleActionPerformed(evt);
             }
         });
-        add(maleclick, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 230, -1, -1));
+        add(rdbMale, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 230, -1, -1));
 
-        femaleclick.setText("Female");
-        add(femaleclick, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 230, -1, -1));
+        rdbFemale.setText("Female");
+        add(rdbFemale, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 230, -1, -1));
 
-        tableforadpprocess.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
-        tableforadpprocess.setModel(new javax.swing.table.DefaultTableModel(
+        tblInitiateBCG.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        tblInitiateBCG.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -211,18 +211,18 @@ public class AdoptionCheckProcess extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tableforadpprocess);
+        jScrollPane1.setViewportView(tblInitiateBCG);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 440, 810, 110));
 
-        buttonbcginitiate.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        buttonbcginitiate.setText("Initiate BGC");
-        buttonbcginitiate.addActionListener(new java.awt.event.ActionListener() {
+        btnInitiateBCG.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        btnInitiateBCG.setText("Initiate BGC");
+        btnInitiateBCG.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonbcginitiateActionPerformed(evt);
+                btnInitiateBCGActionPerformed(evt);
             }
         });
-        add(buttonbcginitiate, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 580, 150, 30));
+        add(btnInitiateBCG, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 580, 150, 30));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/kids11.png"))); // NOI18N
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 930, 510));
@@ -236,21 +236,21 @@ public class AdoptionCheckProcess extends javax.swing.JPanel {
         add(lblRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 20, 30, 50));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void maleclickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maleclickActionPerformed
+    private void rdbMaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbMaleActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_maleclickActionPerformed
+    }//GEN-LAST:event_rdbMaleActionPerformed
 
-    private void buttonbcginitiateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonbcginitiateActionPerformed
+    private void btnInitiateBCGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInitiateBCGActionPerformed
         // TODO add your handling code here:
-        int selectedRow = tableforadpprocess.getSelectedRow();
+        int selectedRow = tblInitiateBCG.getSelectedRow();
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a workrequest");
             return;
         }
 
-        Object receiverval = tableforadpprocess.getValueAt(selectedRow, 2);
-        Object statusval = tableforadpprocess.getValueAt(selectedRow, 4);
-        AdoptionProcessWorkRequest request = (AdoptionProcessWorkRequest) tableforadpprocess.getValueAt(selectedRow, 0);
+        Object receiverval = tblInitiateBCG.getValueAt(selectedRow, 2);
+        Object statusval = tblInitiateBCG.getValueAt(selectedRow, 4);
+        AdoptionProcessWorkRequest request = (AdoptionProcessWorkRequest) tblInitiateBCG.getValueAt(selectedRow, 0);
 
         if ("Initialized BGC".equalsIgnoreCase(request.getStatus())) {
             JOptionPane.showMessageDialog(null, "BGC already initiated");
@@ -324,7 +324,7 @@ public class AdoptionCheckProcess extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "The selected work request assigned to you is already processed");
             }
         }
-    }//GEN-LAST:event_buttonbcginitiateActionPerformed
+    }//GEN-LAST:event_btnInitiateBCGActionPerformed
 
     private void lblRefreshMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRefreshMousePressed
         // TODO add your handling code here:
@@ -333,25 +333,25 @@ public class AdoptionCheckProcess extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel adoptionprocess;
-    private javax.swing.JLabel agelabe;
-    private javax.swing.JTextField agetext;
-    private javax.swing.JButton buttonbcginitiate;
-    private javax.swing.JLabel emaillab;
-    private javax.swing.JTextField emailtext;
-    private javax.swing.JRadioButton femaleclick;
-    private javax.swing.JLabel genlab;
-    private javax.swing.JLabel incomelab;
-    private javax.swing.JTextField incometext;
+    private javax.swing.JButton btnInitiateBCG;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel labelAdopDetailmain;
+    private javax.swing.JLabel lblAdopterDetails;
+    private javax.swing.JLabel lblHeading;
     private javax.swing.JLabel lblRefresh;
-    private javax.swing.JRadioButton maleclick;
-    private javax.swing.JLabel namelabel;
-    private javax.swing.JLabel ssnlab;
-    private javax.swing.JTextField ssntext;
-    private javax.swing.JTable tableforadpprocess;
-    private javax.swing.JTextField textname;
+    private javax.swing.JRadioButton rdbFemale;
+    private javax.swing.JRadioButton rdbMale;
+    private javax.swing.JTable tblInitiateBCG;
+    private javax.swing.JTextField txtAge;
+    private javax.swing.JTextField txtEmail;
+    private javax.swing.JTextField txtIncome;
+    private javax.swing.JTextField txtName;
+    private javax.swing.JTextField txtSSN;
     // End of variables declaration//GEN-END:variables
 }

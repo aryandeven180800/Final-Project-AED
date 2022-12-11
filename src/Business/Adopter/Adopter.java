@@ -7,7 +7,7 @@ package Business.Adopter;
 
 /**
  *
- * @author LENOVO
+ * @author Kunjan
  */
 public class Adopter {
 

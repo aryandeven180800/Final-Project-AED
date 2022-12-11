@@ -5,7 +5,7 @@
  */
 package Business.Role;
 
-import Business.Adopter.AdpDirec;
+import Business.Adopter.AdopterDirectory;
 import Business.Child.ChildDirectory;
 import Business.Donor.DonorDirectory;
 import Business.EcoSystem;
@@ -14,19 +14,19 @@ import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 
 
-import Business.UAcc.UAcc;
+import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
 import userinterface.FundingFinanceRole.FundingWorkArea;
 
 
 /**
  *
- * @author anushree_j
+ * @author Kunjan
  */
 public class FundingFinanceRole extends Role{
 
     @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, AdpDirec adopterdirectory,DonorDirectory donorDirectory) {
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, AdopterDirectory adopterdirectory,DonorDirectory donorDirectory) {
         return new FundingWorkArea(userProcessContainer, account, organization, enterprise, business, childdirectory);
     }
      @Override

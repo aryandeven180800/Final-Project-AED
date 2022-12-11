@@ -8,7 +8,7 @@ package userinterface.labOrganisation;
 import Business.EcoSystem;
 import Business.Organization.LabOrganization;
 import Business.Organization.Organization;
-import Business.UAcc.UAcc;
+import Business.UserAccount.UserAccount;
 import Business.WorkQueue.LabProcessWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
@@ -24,13 +24,13 @@ public class LabJPanel extends javax.swing.JPanel {
     
     private JPanel userProcessContainer;
     private EcoSystem business;
-    private UAcc userAccount;
+    private UserAccount userAccount;
     private LabOrganization labOrganization;
 
     /**
      * Creates new form LabJPanel
      */
-    public LabJPanel(JPanel userProcessContainer, UAcc account, Organization organization, EcoSystem business) {
+    public LabJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, EcoSystem business) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.userAccount = account;

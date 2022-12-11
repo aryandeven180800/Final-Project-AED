@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author shrey
+ * @author MyPC1
  */
 public class EnterpriseDirectory {
     private ArrayList<Enterprise> enterpriseList;
@@ -33,11 +33,11 @@ public class EnterpriseDirectory {
     public Enterprise createAndAddEnterprise(String name,Enterprise.EnterpriseType type){
         Enterprise enterprise=null;
         if(type==Enterprise.EnterpriseType.Hospital){
-            enterprise=new HosEnterprices(name);
+            enterprise=new HospitalEnterprise(name);
             enterpriseList.add(enterprise);
         }
         else if(type==Enterprise.EnterpriseType.FosterCare){
-            enterprise=new FosterCaringEnterpris(name);
+            enterprise=new FosterCareEnterprise(name);
             enterpriseList.add(enterprise);
         }
         else if (type == Enterprise.EnterpriseType.Adoption)

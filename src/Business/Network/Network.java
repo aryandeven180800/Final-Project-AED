@@ -10,7 +10,7 @@ import Business.Enterprise.EnterpriseDirectory;
 
 /**
  *
- * @author LENOVO
+ * @author MyPC1
  */
 public class Network {
 

@@ -7,7 +7,7 @@ package Business.WorkQueue;
 
 /**
  *
- * @author anushree_j
+ * @author Kunjan
  */
 public class DonorWorkRequest extends WorkRequest {
     private String Remarks;

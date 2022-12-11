@@ -9,7 +9,7 @@ import Business.Employee.Employee;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 import Business.Role.Role;
-import Business.UAcc.UAcc;
+import Business.UserAccount.UserAccount;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -37,40 +37,40 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
     }
 
     public void popOrganizationComboBox() {
-        orgright.removeAllItems();
+        organizationJComboBox.removeAllItems();
 
         for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
-            orgright.addItem(organization);
+            organizationJComboBox.addItem(organization);
         }
     }
 
     public void populateEmployeeComboBox(Organization organization) {
-        empright.removeAllItems();
+        employeeJComboBox.removeAllItems();
 
         for (Employee employee : organization.getEmployeeDirectory().getEmployeeList()) {
-            empright.addItem(employee);
+            employeeJComboBox.addItem(employee);
         }
     }
 
     private void populateRoleComboBox(Organization organization) {
-        roleright.removeAllItems();
+        roleJComboBox.removeAllItems();
         for (Role role : organization.getSupportedRole()) {
-            roleright.addItem(role);
+            roleJComboBox.addItem(role);
         }
     }
 
     public void popData() {
 
-        DefaultTableModel model = (DefaultTableModel) usertablebox.getModel();
+        DefaultTableModel model = (DefaultTableModel) userJTable.getModel();
 
         model.setRowCount(0);
 
         for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
-            for (UAcc ua : organization.getUserAccountDirectory().getUserAccountList()) {
+            for (UserAccount ua : organization.getUserAccountDirectory().getUserAccountList()) {
                 Object row[] = new Object[2];
                 row[0] = ua;
                 row[1] = ua.getRole();
-                ((DefaultTableModel) usertablebox.getModel()).addRow(row);
+                ((DefaultTableModel) userJTable.getModel()).addRow(row);
             }
         }
     }
@@ -84,43 +84,44 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        createUserJButtonclick = new javax.swing.JButton();
-        usernameright = new javax.swing.JTextField();
-        usernameleft = new javax.swing.JLabel();
+        createUserJButton = new javax.swing.JButton();
+        nameJTextField = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        usertablebox = new javax.swing.JTable();
-        passwordleft = new javax.swing.JLabel();
-        passwordtextright = new javax.swing.JTextField();
-        empleft = new javax.swing.JLabel();
-        empright = new javax.swing.JComboBox();
-        orgleft = new javax.swing.JLabel();
-        orgright = new javax.swing.JComboBox();
-        roleleft = new javax.swing.JLabel();
-        roleright = new javax.swing.JComboBox();
+        userJTable = new javax.swing.JTable();
+        jLabel2 = new javax.swing.JLabel();
+        passwordJTextField = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        employeeJComboBox = new javax.swing.JComboBox();
+        jLabel5 = new javax.swing.JLabel();
+        organizationJComboBox = new javax.swing.JComboBox();
+        jLabel4 = new javax.swing.JLabel();
+        roleJComboBox = new javax.swing.JComboBox();
         jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        createUserJButtonclick.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        createUserJButtonclick.setText("Create");
-        createUserJButtonclick.addActionListener(new java.awt.event.ActionListener() {
+        createUserJButton.setBackground(new java.awt.Color(255, 255, 255));
+        createUserJButton.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        createUserJButton.setText("Create");
+        createUserJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                createUserJButtonclickActionPerformed(evt);
+                createUserJButtonActionPerformed(evt);
             }
         });
-        add(createUserJButtonclick, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 590, 133, 33));
+        add(createUserJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 590, 133, 33));
 
-        usernameright.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        add(usernameright, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 450, 200, 35));
+        nameJTextField.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        add(nameJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 450, 200, 35));
 
-        usernameleft.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        usernameleft.setText("User Name");
-        add(usernameleft, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 450, 89, 35));
+        jLabel1.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLabel1.setText("User Name");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 450, 89, 35));
 
-        usertablebox.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
-        usertablebox.setModel(new javax.swing.table.DefaultTableModel(
+        userJTable.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        userJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -143,47 +144,47 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(usertablebox);
-        if (usertablebox.getColumnModel().getColumnCount() > 0) {
-            usertablebox.getColumnModel().getColumn(0).setResizable(false);
-            usertablebox.getColumnModel().getColumn(1).setResizable(false);
+        jScrollPane1.setViewportView(userJTable);
+        if (userJTable.getColumnModel().getColumnCount() > 0) {
+            userJTable.getColumnModel().getColumn(0).setResizable(false);
+            userJTable.getColumnModel().getColumn(1).setResizable(false);
         }
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 680, 140));
 
-        passwordleft.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        passwordleft.setText("Password");
-        add(passwordleft, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 500, 89, 35));
+        jLabel2.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLabel2.setText("Password");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 500, 89, 35));
 
-        passwordtextright.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        add(passwordtextright, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 500, 200, 35));
+        passwordJTextField.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        add(passwordJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 500, 200, 35));
 
-        empleft.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        empleft.setText("Employee");
-        add(empleft, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 350, 105, 35));
+        jLabel3.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLabel3.setText("Employee");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 350, 105, 35));
 
-        empright.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
-        add(empright, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 350, 200, 30));
+        employeeJComboBox.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
+        add(employeeJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 350, 200, 30));
 
-        orgleft.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        orgleft.setText("Organization");
-        add(orgleft, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 300, 105, 34));
+        jLabel5.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLabel5.setText("Organization");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 300, 105, 34));
 
-        orgright.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
-        orgright.addActionListener(new java.awt.event.ActionListener() {
+        organizationJComboBox.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
+        organizationJComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                orgrightActionPerformed(evt);
+                organizationJComboBoxActionPerformed(evt);
             }
         });
-        add(orgright, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, 200, 30));
-        orgright.getAccessibleContext().setAccessibleName("");
+        add(organizationJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, 200, 30));
+        organizationJComboBox.getAccessibleContext().setAccessibleName("");
 
-        roleleft.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        roleleft.setText("Role");
-        add(roleleft, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 400, 66, 35));
+        jLabel4.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLabel4.setText("Role");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 400, 66, 35));
 
-        roleright.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
-        add(roleright, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 400, 200, 30));
+        roleJComboBox.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
+        add(roleJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 400, 200, 30));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/user background.png"))); // NOI18N
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 80, 570, 560));
@@ -194,9 +195,9 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, 420, 30));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void createUserJButtonclickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createUserJButtonclickActionPerformed
-        String userName = usernameright.getText();
-        String password = passwordtextright.getText();
+    private void createUserJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createUserJButtonActionPerformed
+        String userName = nameJTextField.getText();
+        String password = passwordJTextField.getText();
         if ("".equals(userName)) {
             JOptionPane.showMessageDialog(null, "Please enter username");
         } else if (!ecosystem.checkIfUserIsUnique(userName)) {
@@ -204,42 +205,42 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         } else if ("".equals(password)) {
             JOptionPane.showMessageDialog(null, "Please enter password");
         } else {
-            Organization organization = (Organization) orgright.getSelectedItem();
-            Employee employee = (Employee) empright.getSelectedItem();
-            Role role = (Role) roleright.getSelectedItem();
+            Organization organization = (Organization) organizationJComboBox.getSelectedItem();
+            Employee employee = (Employee) employeeJComboBox.getSelectedItem();
+            Role role = (Role) roleJComboBox.getSelectedItem();
             organization.getUserAccountDirectory().createUserAccount(userName, password, employee, role);
             JOptionPane.showMessageDialog(null, "User Account Created");
-            usernameright.setText("");
-            passwordtextright.setText("");
+            nameJTextField.setText("");
+            passwordJTextField.setText("");
             popData();
         }
-    }//GEN-LAST:event_createUserJButtonclickActionPerformed
+    }//GEN-LAST:event_createUserJButtonActionPerformed
 
-    private void orgrightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orgrightActionPerformed
-        Organization organization = (Organization) orgright.getSelectedItem();
+    private void organizationJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organizationJComboBoxActionPerformed
+        Organization organization = (Organization) organizationJComboBox.getSelectedItem();
         if (organization != null) {
             populateEmployeeComboBox(organization);
             populateRoleComboBox(organization);
-            usernameright.setText("");
-            passwordtextright.setText("");
+            nameJTextField.setText("");
+            passwordJTextField.setText("");
         }
-    }//GEN-LAST:event_orgrightActionPerformed
+    }//GEN-LAST:event_organizationJComboBoxActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton createUserJButtonclick;
-    private javax.swing.JLabel empleft;
-    private javax.swing.JComboBox empright;
+    private javax.swing.JButton createUserJButton;
+    private javax.swing.JComboBox employeeJComboBox;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel orgleft;
-    private javax.swing.JComboBox orgright;
-    private javax.swing.JLabel passwordleft;
-    private javax.swing.JTextField passwordtextright;
-    private javax.swing.JLabel roleleft;
-    private javax.swing.JComboBox roleright;
-    private javax.swing.JLabel usernameleft;
-    private javax.swing.JTextField usernameright;
-    private javax.swing.JTable usertablebox;
+    private javax.swing.JTextField nameJTextField;
+    private javax.swing.JComboBox organizationJComboBox;
+    private javax.swing.JTextField passwordJTextField;
+    private javax.swing.JComboBox roleJComboBox;
+    private javax.swing.JTable userJTable;
     // End of variables declaration//GEN-END:variables
 }

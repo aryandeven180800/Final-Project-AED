@@ -11,7 +11,7 @@ import Business.EcoSystem;
 import Business.Organization.ChildCareOrganization;
 import Business.Organization.Organization;
 import Business.Role.Role;
-import Business.UAcc.UAcc;
+import Business.UserAccount.UserAccount;
 import Business.WorkQueue.ChildCareWorkRequest;
 import Business.WorkQueue.MedicalHelpWorkRequest;
 import Business.WorkQueue.WorkRequest;
@@ -35,10 +35,10 @@ public class ProcessAcquireChild extends javax.swing.JPanel {
     Child child;
     ChildDirectory childdirectory;
     ChildCareOrganization childCareOrganization;
-    UAcc account;
+    UserAccount account;
     EcoSystem business;
 
-    public ProcessAcquireChild(JPanel userProcessContainer, Organization organization, ChildCareWorkRequest request, ChildDirectory childdirectory, Child child, UAcc account, EcoSystem business) {
+    public ProcessAcquireChild(JPanel userProcessContainer, Organization organization, ChildCareWorkRequest request, ChildDirectory childdirectory, Child child, UserAccount account, EcoSystem business) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.childCareOrganization = (ChildCareOrganization) organization;

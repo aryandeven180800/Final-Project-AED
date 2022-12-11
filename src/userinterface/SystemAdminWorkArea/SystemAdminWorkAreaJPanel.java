@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author LENOVO
+ * @author shrey
  */
 public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 

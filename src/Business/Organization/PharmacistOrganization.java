@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author LENOVO
+ * @author Kunjan
  */
 public class PharmacistOrganization extends Organization{
     String name;

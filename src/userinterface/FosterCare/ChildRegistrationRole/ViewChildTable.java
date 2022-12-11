@@ -15,7 +15,7 @@ import Business.Organization.DoctorOrganization;
 import Business.Organization.LabOrganization;
 import Business.Organization.Organization;
 import Business.Organization.PharmacistOrganization;
-import Business.UAcc.UAcc;
+import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +33,7 @@ public class ViewChildTable extends javax.swing.JPanel {
      * Creates new form ChildRegistrationWorkAreaPanel
      */
     JPanel userProcessContainer;
-    UAcc account;
+    UserAccount account;
     ChildRegistrationOrganization childRegistrationOrganization;
     Enterprise enterprise;
     Child child;
@@ -41,7 +41,7 @@ public class ViewChildTable extends javax.swing.JPanel {
     EcoSystem business;
     Network network;
 
-    public ViewChildTable(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory) {
+    public ViewChildTable(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.account = account;
