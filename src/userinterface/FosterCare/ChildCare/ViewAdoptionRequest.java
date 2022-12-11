@@ -26,7 +26,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author shrey
+ * @author LENOVO
  */
 public class ViewAdoptionRequest extends javax.swing.JPanel {
 

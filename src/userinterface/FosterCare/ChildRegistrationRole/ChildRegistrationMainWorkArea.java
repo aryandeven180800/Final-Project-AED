@@ -18,7 +18,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author LENOVO
+ * @author shrey
  */
 public class ChildRegistrationMainWorkArea extends javax.swing.JPanel {
 

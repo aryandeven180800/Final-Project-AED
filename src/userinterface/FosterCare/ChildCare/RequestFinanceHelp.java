@@ -23,7 +23,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author shrey
+ * @author LENOVO
  */
 public class RequestFinanceHelp extends javax.swing.JPanel {
 

@@ -16,7 +16,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author shrey
+ * @author LENOVO
  */
 public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
     private JPanel userProcessContainer;

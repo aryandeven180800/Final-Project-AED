@@ -22,7 +22,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author anushree_j
+ * @author LENOVO
  */
 public class DoctorRequestLab extends javax.swing.JPanel {
 

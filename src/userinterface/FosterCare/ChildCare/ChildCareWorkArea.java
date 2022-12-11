@@ -21,7 +21,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author shrey
+ * @author LENOVO
  */
 public class ChildCareWorkArea extends javax.swing.JPanel {
 

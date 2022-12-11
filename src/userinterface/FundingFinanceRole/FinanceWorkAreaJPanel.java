@@ -20,7 +20,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author LENOVO
+ * @author anushree_j
  */
 public class FinanceWorkAreaJPanel extends javax.swing.JPanel {
 

@@ -26,7 +26,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author shrey
+ * @author LENOVO
  */
 public class PaymentPanel extends javax.swing.JPanel {
 

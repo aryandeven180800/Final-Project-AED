@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author LENOVO
+ * @author anushree_j
  */
 public class FundingWorkArea extends javax.swing.JPanel {
 

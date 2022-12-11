@@ -20,7 +20,7 @@ import userinterface.FundingRoleAdmin.FundingUnitWorkRequestJPanel;
 
 /**
  *
- * @author anushree_j
+ * @author LENOVO
  */
 public class AdminWorkAreaJPanel extends javax.swing.JPanel {
 

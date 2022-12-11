@@ -25,7 +25,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author shrey
+ * @author LENOVO
  */
 public class AcquireChild extends javax.swing.JPanel {
 

@@ -21,7 +21,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author anushree_j
+ * @author LENOVO
  */
 public class BGCandCriminalCheckRequestJPanel extends javax.swing.JPanel {
 

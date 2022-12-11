@@ -24,7 +24,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author shrey
+ * @author LENOVO
  */
 public class ViewChildDetails extends javax.swing.JPanel {
 

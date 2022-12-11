@@ -22,7 +22,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author anushree_j
+ * @author shrey
  */
 public class CheckStatusJPanel extends javax.swing.JPanel {
 

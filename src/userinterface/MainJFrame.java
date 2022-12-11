@@ -21,7 +21,7 @@ import userinterface.UserRegisteration.AdopterRegistrationJPanel;
 
 /**
  *
- * @author anushree_j
+ * @author LENOVO
  */
 public class MainJFrame extends javax.swing.JFrame {
 

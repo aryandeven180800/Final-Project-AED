@@ -22,8 +22,8 @@ public class CommonMail {
     
         public static void sendEmailMessage(String emailId, String subject, String text) {
         String to = emailId;
-        String from = "neukare4kids@gmail.com";
-        String pass = "kare4kids@2022";
+        String from = "neuuplift@gmail.com";
+        String pass = "neuuplift@2021";
 
         Properties properties = System.getProperties();
         String host = "smtp.gmail.com";

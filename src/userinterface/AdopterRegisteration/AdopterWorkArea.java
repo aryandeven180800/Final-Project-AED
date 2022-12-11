@@ -18,7 +18,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author anushree_j
+ * @author LENOVO
  */
 public class AdopterWorkArea extends javax.swing.JPanel {
 

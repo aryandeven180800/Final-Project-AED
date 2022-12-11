@@ -25,7 +25,7 @@ import javax.swing.event.DocumentListener;
 
 /**
  *
- * @author LENOVO
+ * @author anushree_j
  */
 public class SponsorRegistrationJPanel extends javax.swing.JPanel {
 

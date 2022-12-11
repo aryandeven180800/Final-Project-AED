@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author shrey
+ * @author LENOVO
  */
 public class LabProcessJPanel extends javax.swing.JPanel {
     

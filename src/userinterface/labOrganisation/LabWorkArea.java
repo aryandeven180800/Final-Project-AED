@@ -18,7 +18,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author shrey
+ * @author anushree_j
  */
 public class LabWorkArea extends javax.swing.JPanel {
 

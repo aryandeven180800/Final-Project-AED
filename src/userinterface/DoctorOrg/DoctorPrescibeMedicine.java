@@ -22,7 +22,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author anushree_j
+ * @author shrey
  */
 public class DoctorPrescibeMedicine extends javax.swing.JPanel {
 
