@@ -368,7 +368,7 @@ public class AdopterRegistrationJPanel extends javax.swing.JPanel {
             registrationRequest.setAnnualIncome(txtIncome.getText());
             registrationRequest.setAge(txtAge.getText());
             String subject = "Adopter Registration";
-            String content = "Dear Adopter, thank you for registering with us. Your account will be activated within 24 hours. We will keep you posted with your status.";
+            String content = "Dear Adopter, thank you so much for registering with us. We will activate your account within 24 hours. Your status will be updated.";
             CommonMail.sendEmailMessage(txtEmail.getText(), subject, content);
             for (Network network1 : system.getNetworkList()) {
                 for (Enterprise enterprise : network1.getEnterpriseDirectory().getEnterpriseList()) {

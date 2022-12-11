@@ -384,8 +384,8 @@ public class SponsorRegistrationJPanel extends javax.swing.JPanel {
             registrationRequest.setUserContact(txtContact.getText());
             registrationRequest.setStatus("Request access");
             registrationRequest.setAnnualIncome(txtIncome.getText());
-            String subject = "Sponsorer Registeration";
-            String content = "Thank you for registering with us. Your account will be activated within 24 hours. We will keep you posted with your status.";
+            String subject = "Sponsorer Registration";
+            String content = "Hello Sponsorer, thank you so much for registering with us. We will activate your account within 24 hours. Your status will be updated.";
             CommonMail.sendEmailMessage(txtEmail.getText(), subject, content);
             for (Network network1 : system.getNetworkList()) {
                 for (Enterprise enterprise : network1.getEnterpriseDirectory().getEnterpriseList()) {
