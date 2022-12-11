@@ -13,7 +13,7 @@ import Business.Network.Network;
 import Business.Organization.DoctorOrganization;
 import Business.Organization.LabOrganization;
 import Business.Organization.PharmacistOrganization;
-import Business.UserAccount.UserAccount;
+import Business.UAcc.UAcc;
 import Business.WorkQueue.MedicalHelpWorkRequest;
 import Business.WorkQueue.LabProcessWorkRequest;
 import Business.WorkQueue.PharmacistWorkRequest;
@@ -36,7 +36,7 @@ public class AssignChildJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
     private Enterprise enterprise;
-    private UserAccount userAccount;
+    private UAcc userAccount;
     private PharmacistOrganization pharmacistOrganization;
     private DoctorOrganization doctororganization;
     private EcoSystem business;
@@ -51,7 +51,7 @@ public class AssignChildJPanel extends javax.swing.JPanel {
     Network network;
     
     
-    public AssignChildJPanel(JPanel userProcessContainer, MedicalHelpWorkRequest request, Child child, UserAccount userAccount, DoctorOrganization doctororganization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory) {
+    public AssignChildJPanel(JPanel userProcessContainer, MedicalHelpWorkRequest request, Child child, UAcc userAccount, DoctorOrganization doctororganization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.request = request;

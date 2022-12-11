@@ -13,7 +13,7 @@ import Business.Network.Network;
 import Business.Organization.ChildCareOrganization;
 import Business.Organization.FinanceOrganization;
 import Business.Organization.Organization;
-import Business.UserAccount.UserAccount;
+import Business.UAcc.UAcc;
 import Business.WorkQueue.EducationalHelpWorkRequest;
 import java.awt.CardLayout;
 import java.util.ArrayList;
@@ -31,7 +31,7 @@ public class RequestFinanceHelp extends javax.swing.JPanel {
      * Creates new form RequestFinanceHelp
      */
     JPanel userProcessContainer;
-    UserAccount account;
+    UAcc account;
     ChildCareOrganization organization;
     Enterprise enterprise;
     EcoSystem business;
@@ -40,7 +40,7 @@ public class RequestFinanceHelp extends javax.swing.JPanel {
     String data;
     Network network;
 
-    public RequestFinanceHelp(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, Child child, String data) {
+    public RequestFinanceHelp(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, Child child, String data) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.account = account;

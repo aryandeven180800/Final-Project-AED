@@ -11,7 +11,7 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.AdoptionOrganization;
 import Business.Organization.Organization;
-import Business.UserAccount.UserAccount;
+import Business.UAcc.UAcc;
 import Business.WorkQueue.AdoptionProcessWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
@@ -30,14 +30,14 @@ public class AdoptionRequestJPanel extends javax.swing.JPanel {
      */
     
     JPanel userProcessContainer;
-    UserAccount account;
+    UAcc account;
     Enterprise enterprise;
     EcoSystem business;
     AdpDirec adopterdirectory;
     AdoptionOrganization adoptionOrganization;
     Adopter adopter;
     
-    public AdoptionRequestJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AdpDirec adopterdirectory) {
+    public AdoptionRequestJPanel(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, AdpDirec adopterdirectory) {
         initComponents();
         this.userProcessContainer=userProcessContainer;
         this.adopterdirectory=adopterdirectory;

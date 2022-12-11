@@ -12,7 +12,7 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.AdopterOrganization;
 import Business.Organization.Organization;
-import Business.UserAccount.UserAccount;
+import Business.UAcc.UAcc;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
@@ -26,7 +26,7 @@ public class AdopterWorkArea extends javax.swing.JPanel {
      * Creates new form SystemAdminWorkAreaJPanel
      */
     JPanel userProcessContainer;
-    UserAccount account;
+    UAcc account;
     Enterprise enterprise;
     EcoSystem business;
     AdpDirec adopterdirectory;
@@ -36,7 +36,7 @@ public class AdopterWorkArea extends javax.swing.JPanel {
     ChildDirectory childdirectory;
     
     
-    public AdopterWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AdpDirec adopterdirectory, ChildDirectory childdirectory) {
+    public AdopterWorkArea(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, AdpDirec adopterdirectory, ChildDirectory childdirectory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.adopterdirectory = adopterdirectory;

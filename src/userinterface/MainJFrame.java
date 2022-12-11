@@ -12,7 +12,7 @@ import Business.Donor.DonorDirectory;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.Organization;
-import Business.UserAccount.UserAccount;
+import Business.UAcc.UAcc;
 import userinterface.UserRegisteration.SponsorRegistrationJPanel;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
@@ -30,7 +30,7 @@ public class MainJFrame extends javax.swing.JFrame {
      */
     private EcoSystem system;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
-    UserAccount userAccount;
+    UAcc userAccount;
     Enterprise inEnterprise;
     Organization inOrganization;
     Network networkEmergency;

@@ -6,7 +6,7 @@ package userinterface.AdministrativeRole;
 
 import Business.Employee.Employee;
 import Business.Organization.Organization;
-import Business.Organization.OrganizationDirectory;
+import Business.Organization.OrgDirectory;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -17,13 +17,13 @@ import javax.swing.table.DefaultTableModel;
  */
 public class ManageEmployeeJPanel extends javax.swing.JPanel {
 
-    private OrganizationDirectory organizationDir;
+    private OrgDirectory organizationDir;
     private JPanel userProcessContainer;
     
     /**
      * Creates new form ManageOrganizationJPanel
      */
-    public ManageEmployeeJPanel(JPanel userProcessContainer,OrganizationDirectory organizationDir) {
+    public ManageEmployeeJPanel(JPanel userProcessContainer,OrgDirectory organizationDir) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.organizationDir = organizationDir;

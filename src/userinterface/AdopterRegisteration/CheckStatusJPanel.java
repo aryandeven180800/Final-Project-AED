@@ -12,7 +12,7 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.AdopterOrganization;
 import Business.Organization.Organization;
-import Business.UserAccount.UserAccount;
+import Business.UAcc.UAcc;
 import Business.WorkQueue.AdopterStatusCheckWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
@@ -31,7 +31,7 @@ public class CheckStatusJPanel extends javax.swing.JPanel {
      */
     
     JPanel userProcessContainer;
-    UserAccount account;
+    UAcc account;
     Enterprise enterprise;
     EcoSystem business;
     AdpDirec adopterdirectory;
@@ -41,7 +41,7 @@ public class CheckStatusJPanel extends javax.swing.JPanel {
     int uid;
     ChildDirectory childdirectory;
     
-    public CheckStatusJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AdpDirec adopterdirectory, int uid, ChildDirectory childdirectory) {
+    public CheckStatusJPanel(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, AdpDirec adopterdirectory, int uid, ChildDirectory childdirectory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.adopterdirectory = adopterdirectory;

@@ -11,7 +11,7 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.BackgroundAndCriminalCheckOrganization;
 import Business.Organization.Organization;
-import Business.UserAccount.UserAccount;
+import Business.UAcc.UAcc;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
@@ -25,7 +25,7 @@ public class BGCandCriminalWorkArea extends javax.swing.JPanel {
      * Creates new form SystemAdminWorkAreaJPanel
      */
     JPanel userProcessContainer;
-    UserAccount account;
+    UAcc account;
     Enterprise enterprise;
     EcoSystem business;
     AdpDirec adopterdirectory;
@@ -33,7 +33,7 @@ public class BGCandCriminalWorkArea extends javax.swing.JPanel {
     Adopter adopter;
     
     
-    public BGCandCriminalWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AdpDirec adopterdirectory) {
+    public BGCandCriminalWorkArea(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, AdpDirec adopterdirectory) {
         initComponents();
         this.userProcessContainer=userProcessContainer;
         this.adopterdirectory=adopterdirectory;

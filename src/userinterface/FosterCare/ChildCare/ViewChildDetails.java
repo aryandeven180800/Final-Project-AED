@@ -15,7 +15,7 @@ import Business.Network.Network;
 import Business.Organization.ChildCareOrganization;
 import Business.Organization.Organization;
 import Business.Role.Role;
-import Business.UserAccount.UserAccount;
+import Business.UAcc.UAcc;
 import java.awt.CardLayout;
 import java.awt.Component;
 import javax.swing.JOptionPane;
@@ -35,7 +35,7 @@ public class ViewChildDetails extends javax.swing.JPanel {
     JPanel userProcessContainer;
     Enterprise enterprise;
     Organization organization;
-    UserAccount account;
+    UAcc account;
     ChildCareOrganization childCareOrganization;
     ChildDirectory childdirectory;
     Child child;
@@ -46,7 +46,7 @@ public class ViewChildDetails extends javax.swing.JPanel {
     Role roler;
     Network network;
     
-    public ViewChildDetails(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, AdpDirec adopterdirectory) {
+    public ViewChildDetails(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, AdpDirec adopterdirectory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.account = account;

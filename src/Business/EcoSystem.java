@@ -13,7 +13,7 @@ import Business.Network.Network;
 import Business.Organization.Organization;
 import Business.Role.Role;
 import Business.Role.SystemAdminRole;
-import Business.UserAccount.UserAccount;
+import Business.UAcc.UAcc;
 import java.util.ArrayList;
 
 /**
@@ -66,13 +66,13 @@ public class EcoSystem extends Organization{
          if(this.business!=null){
            for (Network network : business.getNetworkList()) {
             for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
-                for (UserAccount ua : enterprise.getUserAccountDirectory().getUserAccountList()) {
+                for (UAcc ua : enterprise.getUserAccountDirectory().getUserAccountList()) {
                     if (ua.getUsername().equalsIgnoreCase(userName)) {
                         return false;
                     }
                 }
                 for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
-                    for (UserAccount ua : organization.getUserAccountDirectory().getUserAccountList()) {
+                    for (UAcc ua : organization.getUserAccountDirectory().getUserAccountList()) {
                         if (ua.getUsername().equalsIgnoreCase(userName)) {
                             return false;
                         }

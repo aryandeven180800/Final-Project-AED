@@ -12,7 +12,7 @@ import Business.Network.Network;
 import Business.Organization.ChildRegistrationOrganization;
 import Business.Organization.DoctorOrganization;
 import Business.Organization.Organization;
-import Business.UserAccount.UserAccount;
+import Business.UAcc.UAcc;
 import Business.Utils.ValidationHelper;
 import Business.WorkQueue.MedicalHelpWorkRequest;
 import java.io.File;
@@ -40,7 +40,7 @@ public class RegisterNewChildJPanel extends javax.swing.JPanel {
      * Creates new form RegisterNewChildJPanel
      */
     JPanel userProcessContainer;
-    UserAccount account;
+    UAcc account;
     Enterprise enterprise;
     EcoSystem business;
     ChildDirectory childdirectory;
@@ -48,7 +48,7 @@ public class RegisterNewChildJPanel extends javax.swing.JPanel {
     Network network;
     Random rand;
 
-    public RegisterNewChildJPanel(JPanel userProcessContainer, ChildDirectory childdirectory, UserAccount account, Enterprise enterprise, EcoSystem business, Organization organization) {
+    public RegisterNewChildJPanel(JPanel userProcessContainer, ChildDirectory childdirectory, UAcc account, Enterprise enterprise, EcoSystem business, Organization organization) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.childdirectory = childdirectory;

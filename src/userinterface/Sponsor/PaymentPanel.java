@@ -12,7 +12,7 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.DonorOrganization;
 import Business.Organization.Organization;
-import Business.UserAccount.UserAccount;
+import Business.UAcc.UAcc;
 import Business.WorkQueue.DonorWorkRequest;
 import java.awt.CardLayout;
 import java.awt.Component;
@@ -31,7 +31,7 @@ import javax.swing.JPanel;
 public class PaymentPanel extends javax.swing.JPanel {
 
     JPanel userProcessContainer;
-    UserAccount account;
+    UAcc account;
     Enterprise enterprise;
     EcoSystem business;
     DonorOrganization donororganization;
@@ -39,7 +39,7 @@ public class PaymentPanel extends javax.swing.JPanel {
     ChildDirectory childdirectory;
     Child ch;
   
-    public PaymentPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,ChildDirectory childdirectory,Child ch,Donor donor) { 
+    public PaymentPanel(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business,ChildDirectory childdirectory,Child ch,Donor donor) { 
         initComponents();
         this.userProcessContainer=userProcessContainer;
         this.account=account;

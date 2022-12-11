@@ -13,7 +13,7 @@ import Business.Enterprise.Enterprise;
 
 import Business.Organization.Organization;
 
-import Business.UserAccount.UserAccount;
+import Business.UAcc.UAcc;
 import javax.swing.JPanel;
 import userinterface.Adoption.FinanceCheck.FinanceWorkArea;
 
@@ -25,7 +25,7 @@ import userinterface.Adoption.FinanceCheck.FinanceWorkArea;
 public class FinanceRole extends Role{
 
     @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, AdpDirec adopterdirectory,DonorDirectory donorDirectory) {
+    public JPanel createWorkArea(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, AdpDirec adopterdirectory,DonorDirectory donorDirectory) {
         return new FinanceWorkArea(userProcessContainer,account, organization, enterprise,  business,  adopterdirectory);
     }
     

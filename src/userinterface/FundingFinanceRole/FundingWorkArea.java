@@ -10,7 +10,7 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.FinanceOrganization;
 import Business.Organization.Organization;
-import Business.UserAccount.UserAccount;
+import Business.UAcc.UAcc;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
@@ -24,14 +24,14 @@ public class FundingWorkArea extends javax.swing.JPanel {
      * Creates new form SystemAdminWorkAreaJPanel
      */
     JPanel userProcessContainer;
-    UserAccount account;
+    UAcc account;
     FinanceOrganization financeOrphanageOrganization;
     Enterprise enterprise;
     EcoSystem business;
     ChildDirectory childdirectory;
     int countApprove=0, countDeny=0, countPending=0;
     
-    public FundingWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory) {
+    public FundingWorkArea(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory) {
         initComponents();
         this.userProcessContainer=userProcessContainer;
         this.account=account;

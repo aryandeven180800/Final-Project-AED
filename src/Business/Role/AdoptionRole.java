@@ -13,7 +13,7 @@ import Business.Enterprise.Enterprise;
 
 import Business.Organization.Organization;
 
-import Business.UserAccount.UserAccount;
+import Business.UAcc.UAcc;
 import javax.swing.JPanel;
 import userinterface.Adoption.Adoption.AdoptionMainWorkArea;
 
@@ -26,7 +26,7 @@ import userinterface.Adoption.Adoption.AdoptionMainWorkArea;
 public class AdoptionRole extends Role{
 
     @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, AdpDirec adopterdirectory, DonorDirectory donorDirectory) {
+    public JPanel createWorkArea(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, AdpDirec adopterdirectory, DonorDirectory donorDirectory) {
         return new AdoptionMainWorkArea(userProcessContainer, account, organization, enterprise,business, adopterdirectory);
     }
     @Override

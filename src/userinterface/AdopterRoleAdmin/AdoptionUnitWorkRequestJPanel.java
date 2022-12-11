@@ -13,9 +13,9 @@ import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.AdoptionOrganization;
 import Business.Organization.Organization;
-import Business.Organization.OrganizationDirectory;
+import Business.Organization.OrgDirectory;
 import Business.Role.AdopterRole;
-import Business.UserAccount.UserAccount;
+import Business.UAcc.UAcc;
 import Business.Utils.CommonMail;
 import Business.WorkQueue.AdoptionProcessWorkRequest;
 import Business.WorkQueue.AdopterRegistrationRequest;
@@ -34,13 +34,13 @@ public class AdoptionUnitWorkRequestJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
     private EcoSystem business;
-    private UserAccount userAccount;
+    private UAcc userAccount;
     private Enterprise enterprise;
     private Network network;
-    private OrganizationDirectory organizationDirectory;
+    private OrgDirectory organizationDirectory;
     AdpDirec adopterdirectory;
 
-    public AdoptionUnitWorkRequestJPanel(JPanel userProcessContainer, UserAccount account, Enterprise enterprise, EcoSystem system, AdpDirec adopterdirectory) {
+    public AdoptionUnitWorkRequestJPanel(JPanel userProcessContainer, UAcc account, Enterprise enterprise, EcoSystem system, AdpDirec adopterdirectory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.userAccount = account;
@@ -202,7 +202,7 @@ public class AdoptionUnitWorkRequestJPanel extends javax.swing.JPanel {
 
                 Organization org = organizationDirectory.createOrganization(request.getName(), Organization.Type.Adopter);
                 Employee emp = org.getEmployeeDirectory().createEmployee(request.getName());
-                UserAccount ua1 = org.getUserAccountDirectory().createUserAccount(request.getUserName(), request.getUserPassword(), emp, new AdopterRole());
+                UAcc ua1 = org.getUserAccountDirectory().createUserAccount(request.getUserName(), request.getUserPassword(), emp, new AdopterRole());
                 Adopter adopter = new Adopter();
                 int uid = adopterdirectory.getAdoptersList().size() + 1;
                 adopter = this.adopterdirectory.addAdopter();

@@ -9,7 +9,7 @@ import Business.Employee.Employee;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Role.AdminRole;
-import Business.UserAccount.UserAccount;
+import Business.UAcc.UAcc;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -39,7 +39,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         model.setRowCount(0);
         for (Network network : system.getNetworkList()) {
             for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
-                for (UserAccount userAccount : enterprise.getUserAccountDirectory().getUserAccountList()) {
+                for (UAcc userAccount : enterprise.getUserAccountDirectory().getUserAccountList()) {
                     Object[] row = new Object[3];
                     row[0] = enterprise.getName();
                     row[1] = network.getName();
@@ -201,7 +201,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         } else {
             if (system.checkIfUserIsUnique(username)) {
                 Employee employee = enterprise.getEmployeeDirectory().createEmployee(name);
-                UserAccount account = enterprise.getUserAccountDirectory().createUserAccount(username, password, employee, new AdminRole());
+                UAcc account = enterprise.getUserAccountDirectory().createUserAccount(username, password, employee, new AdminRole());
                 usernameJTextField.setText("");
                 passwordJPasswordField.setText("");
                 nameJTextField.setText("");

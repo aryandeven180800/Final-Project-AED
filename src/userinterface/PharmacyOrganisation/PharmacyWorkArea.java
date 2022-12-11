@@ -9,9 +9,9 @@ import Business.Child.Child;
 import Business.Child.ChildDirectory;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
-import Business.Organization.OrganizationDirectory;
+import Business.Organization.OrgDirectory;
 import Business.Organization.PharmacistOrganization;
-import Business.UserAccount.UserAccount;
+import Business.UAcc.UAcc;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
@@ -27,14 +27,14 @@ public class PharmacyWorkArea extends javax.swing.JPanel {
     JPanel userProcessContainer;
     EcoSystem ecosystem;
     private PharmacistOrganization pharmacistOrganization;
-    private OrganizationDirectory directory;
+    private OrgDirectory directory;
     Enterprise enterprise;
     Child child;
-    private UserAccount userAccount;
+    private UAcc userAccount;
     ChildDirectory childDirectory;
     
     
-    public PharmacyWorkArea(JPanel userProcessContainer, UserAccount account, PharmacistOrganization pharmacistOrganization, Enterprise enterprise ,EcoSystem ecosystem, ChildDirectory childDirectory) {
+    public PharmacyWorkArea(JPanel userProcessContainer, UAcc account, PharmacistOrganization pharmacistOrganization, Enterprise enterprise ,EcoSystem ecosystem, ChildDirectory childDirectory) {
         initComponents();
         System.out.println("here");
         this.userProcessContainer=userProcessContainer;   

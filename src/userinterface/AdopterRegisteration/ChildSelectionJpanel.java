@@ -15,7 +15,7 @@ import Business.Network.Network;
 import Business.Organization.AdopterOrganization;
 import Business.Organization.ChildCareOrganization;
 import Business.Organization.Organization;
-import Business.UserAccount.UserAccount;
+import Business.UAcc.UAcc;
 import Business.WorkQueue.ChildCareAdoptionWorkRequest;
 import Business.WorkQueue.ChildCareWorkRequest;
 import javax.swing.JOptionPane;
@@ -33,7 +33,7 @@ public class ChildSelectionJpanel extends javax.swing.JPanel {
      */
     
     JPanel userProcessContainer;
-    UserAccount account;
+    UAcc account;
     Enterprise enterprise;
     EcoSystem business;
     AdpDirec adopterdirectory;
@@ -44,7 +44,7 @@ public class ChildSelectionJpanel extends javax.swing.JPanel {
     ChildDirectory childdirectory;
     ChildCareWorkRequest request;
     
-    public ChildSelectionJpanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AdpDirec adopterdirectory, int uid, ChildDirectory childdirectory) {
+    public ChildSelectionJpanel(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, AdpDirec adopterdirectory, int uid, ChildDirectory childdirectory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.adopterdirectory = adopterdirectory;

@@ -11,7 +11,7 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.PharmacistOrganization;
-import Business.UserAccount.UserAccount;
+import Business.UAcc.UAcc;
 import Business.WorkQueue.PharmacistWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
@@ -29,7 +29,7 @@ public class PharmacistJPanel extends javax.swing.JPanel {
     private PharmacistOrganization pharmacistOrganization;
     private Enterprise enterprise;
     private EcoSystem business;
-    private UserAccount userAccount;
+    private UAcc userAccount;
     private ChildDirectory childdirectory;
     private Child child;
     Network network;
@@ -37,7 +37,7 @@ public class PharmacistJPanel extends javax.swing.JPanel {
     /**
      * Creates new form PharmacistJPanel
      */
-    public PharmacistJPanel(JPanel userProcessContainer, UserAccount account, PharmacistOrganization pharmacistOrganization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory) {
+    public PharmacistJPanel(JPanel userProcessContainer, UAcc account, PharmacistOrganization pharmacistOrganization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.userAccount = account;

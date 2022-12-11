@@ -12,7 +12,7 @@ import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.ChildRegistrationOrganization;
 import Business.Organization.Organization;
-import Business.UserAccount.UserAccount;
+import Business.UAcc.UAcc;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
@@ -26,7 +26,7 @@ public class ChildRegistrationMainWorkArea extends javax.swing.JPanel {
      * Creates new form SystemAdminWorkAreaJPanel
      */
     JPanel userProcessContainer;
-    UserAccount account;
+    UAcc account;
     ChildRegistrationOrganization childRegistrationOrganization;
     Enterprise enterprise;
     Child child;
@@ -34,7 +34,7 @@ public class ChildRegistrationMainWorkArea extends javax.swing.JPanel {
     EcoSystem business;
     Network network;
 
-    public ChildRegistrationMainWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory) {
+    public ChildRegistrationMainWorkArea(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.account = account;

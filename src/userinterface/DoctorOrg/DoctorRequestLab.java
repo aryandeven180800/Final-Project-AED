@@ -12,7 +12,7 @@ import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.LabOrganization;
 import Business.Organization.Organization;
-import Business.UserAccount.UserAccount;
+import Business.UAcc.UAcc;
 import Business.WorkQueue.MedicalHelpWorkRequest;
 import Business.WorkQueue.LabProcessWorkRequest;
 import java.awt.CardLayout;
@@ -28,7 +28,7 @@ public class DoctorRequestLab extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
     private Enterprise enterprise;
-    private UserAccount userAccount;
+    private UAcc userAccount;
     private ChildDirectory childdirectory;
     private Child child;
     private  MedicalHelpWorkRequest request;
@@ -36,7 +36,7 @@ public class DoctorRequestLab extends javax.swing.JPanel {
     Network network;
     
     
-    public DoctorRequestLab(JPanel userProcessContainer, UserAccount userAccount, Enterprise enterprise, Child child, ChildDirectory childdirectory, MedicalHelpWorkRequest request, EcoSystem business) {
+    public DoctorRequestLab(JPanel userProcessContainer, UAcc userAccount, Enterprise enterprise, Child child, ChildDirectory childdirectory, MedicalHelpWorkRequest request, EcoSystem business) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.enterprise = enterprise;

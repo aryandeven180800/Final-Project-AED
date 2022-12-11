@@ -12,7 +12,7 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.Organization;
-import Business.UserAccount.UserAccount;
+import Business.UAcc.UAcc;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 import userinterface.AdopterRoleAdmin.AdoptionUnitWorkRequestJPanel;
@@ -31,13 +31,13 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
     EcoSystem business;
     Enterprise enterprise;
     Network network;
-    UserAccount account;
+    UAcc account;
     Organization organization;
     AdpDirec adopterdirectory;
     ChildDirectory childdirectory;
     DonorDirectory donorDirectory;
 
-    public AdminWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, AdpDirec adopterdirectory, DonorDirectory donorDirectory) {
+    public AdminWorkAreaJPanel(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, AdpDirec adopterdirectory, DonorDirectory donorDirectory) {
         initComponents();
         System.out.println("here");
         this.userProcessContainer = userProcessContainer;

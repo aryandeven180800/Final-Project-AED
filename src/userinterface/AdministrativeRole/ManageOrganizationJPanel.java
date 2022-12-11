@@ -8,13 +8,13 @@ package userinterface.AdministrativeRole;
 
 import Business.Enterprise.AdoptionEnterprise;
 import Business.Enterprise.Enterprise;
-import Business.Enterprise.FosterCareEnterprise;
+import Business.Enterprise.FosterCaringEnterpris;
 import Business.Enterprise.FundingEnterprise;
 
-import Business.Enterprise.HospitalEnterprise;
+import Business.Enterprise.HosEnterprices;
 import Business.Organization.Organization;
 import Business.Organization.Organization.Type;
-import Business.Organization.OrganizationDirectory;
+import Business.Organization.OrgDirectory;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -26,13 +26,13 @@ import javax.swing.table.DefaultTableModel;
  */
 public class ManageOrganizationJPanel extends javax.swing.JPanel {
 
-    private OrganizationDirectory directory;
+    private OrgDirectory directory;
     private JPanel userProcessContainer;
     private Enterprise enterprise;
     /**
      * Creates new form ManageOrganizationJPanel
      */
-    public ManageOrganizationJPanel(JPanel userProcessContainer,OrganizationDirectory directory, Enterprise enterprise) {
+    public ManageOrganizationJPanel(JPanel userProcessContainer,OrgDirectory directory, Enterprise enterprise) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.directory = directory;
@@ -40,12 +40,12 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         populateTable();
         //populateCombos();
          orgxombobox.removeAllItems();
-        if(enterprise instanceof HospitalEnterprise){
+        if(enterprise instanceof HosEnterprices){
              orgxombobox.addItem(Type.Doctor);
                orgxombobox.addItem(Type.Lab);
                orgxombobox.addItem(Type.Pharmacist);
         }
-        if(enterprise instanceof FosterCareEnterprise){
+        if(enterprise instanceof FosterCaringEnterpris){
           orgxombobox.addItem(Type.ChildCare);
                orgxombobox.addItem(Type.ChildRegistration);
         }

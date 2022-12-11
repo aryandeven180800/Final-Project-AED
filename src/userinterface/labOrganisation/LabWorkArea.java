@@ -11,8 +11,8 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.LabOrganization;
 import Business.Organization.Organization;
-import Business.Organization.OrganizationDirectory;
-import Business.UserAccount.UserAccount;
+import Business.Organization.OrgDirectory;
+import Business.UAcc.UAcc;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
@@ -28,14 +28,14 @@ public class LabWorkArea extends javax.swing.JPanel {
     JPanel userProcessContainer;
     EcoSystem ecosystem;
     private LabOrganization labOrganization;
-    private OrganizationDirectory directory;
+    private OrgDirectory directory;
     Enterprise enterprise;
     Child child;
-    private UserAccount userAccount;
+    private UAcc userAccount;
     ChildDirectory childDirectory;
     
     
-    public LabWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, EcoSystem ecosystem) {
+    public LabWorkArea(JPanel userProcessContainer, UAcc account, Organization organization, EcoSystem ecosystem) {
         initComponents();
         System.out.println("here");
         this.userProcessContainer=userProcessContainer;   

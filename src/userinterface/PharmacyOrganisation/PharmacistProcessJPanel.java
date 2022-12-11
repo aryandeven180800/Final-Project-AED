@@ -13,7 +13,7 @@ import Business.Network.Network;
 import Business.Organization.ChildCareOrganization;
 import Business.Organization.Organization;
 import Business.Organization.PharmacistOrganization;
-import Business.UserAccount.UserAccount;
+import Business.UAcc.UAcc;
 import Business.WorkQueue.ChildCareWorkRequest;
 import Business.WorkQueue.PharmacistWorkRequest;
 import java.awt.CardLayout;
@@ -29,7 +29,7 @@ import Business.WorkQueue.WorkRequest;
 public class PharmacistProcessJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
-    private UserAccount userAccount;
+    private UAcc userAccount;
     private Enterprise enterprise;
     private EcoSystem business;
     PharmacistWorkRequest request ;
@@ -37,7 +37,7 @@ public class PharmacistProcessJPanel extends javax.swing.JPanel {
     private Child child;
     Network network;
     
-    public PharmacistProcessJPanel(JPanel userProcessContainer, PharmacistWorkRequest request, UserAccount userAccount, Enterprise enterprise, Child child, ChildDirectory childdirectory, EcoSystem business, PharmacistOrganization pharmacistOrganization) {
+    public PharmacistProcessJPanel(JPanel userProcessContainer, PharmacistWorkRequest request, UAcc userAccount, Enterprise enterprise, Child child, ChildDirectory childdirectory, EcoSystem business, PharmacistOrganization pharmacistOrganization) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.request = request;

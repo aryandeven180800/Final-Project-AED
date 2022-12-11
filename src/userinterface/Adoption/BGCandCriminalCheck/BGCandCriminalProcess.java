@@ -13,7 +13,7 @@ import Business.Network.Network;
 import Business.Organization.BackgroundAndCriminalCheckOrganization;
 import Business.Organization.FinanceCheckOrganization;
 import Business.Organization.Organization;
-import Business.UserAccount.UserAccount;
+import Business.UAcc.UAcc;
 import Business.Utils.CommonMail;
 import Business.WorkQueue.AdopterStatusCheckWorkRequest;
 import Business.WorkQueue.BGVProcessWorkRequest;
@@ -33,7 +33,7 @@ public class BGCandCriminalProcess extends javax.swing.JPanel {
      * Creates new form BGCandCriminalProcess
      */
     JPanel userProcessContainer;
-    UserAccount account;
+    UAcc account;
     Enterprise enterprise;
     EcoSystem business;
     AdpDirec adopterdirectory;
@@ -41,7 +41,7 @@ public class BGCandCriminalProcess extends javax.swing.JPanel {
     Adopter adopter;
     BGVProcessWorkRequest bgcWorkRequest;
     
-    public BGCandCriminalProcess(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AdpDirec adopterdirectory, BGVProcessWorkRequest bgcWorkRequest, Adopter adopter) {
+    public BGCandCriminalProcess(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, AdpDirec adopterdirectory, BGVProcessWorkRequest bgcWorkRequest, Adopter adopter) {
         initComponents();
         this.userProcessContainer=userProcessContainer;
         this.adopterdirectory=adopterdirectory;

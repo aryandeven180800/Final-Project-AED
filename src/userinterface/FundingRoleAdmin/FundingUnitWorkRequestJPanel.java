@@ -13,9 +13,9 @@ import Business.Employee.Employee;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.Organization;
-import Business.Organization.OrganizationDirectory;
+import Business.Organization.OrgDirectory;
 import Business.Role.DonorRole;
-import Business.UserAccount.UserAccount;
+import Business.UAcc.UAcc;
 import Business.Utils.CommonMail;
 import Business.WorkQueue.DonorRegistrationRequest;
 import Business.WorkQueue.DonorWorkRequest;
@@ -35,14 +35,14 @@ public class FundingUnitWorkRequestJPanel extends javax.swing.JPanel {
      */
     private JPanel userProcessContainer;
     private EcoSystem business;
-    private UserAccount userAccount;
+    private UAcc userAccount;
     private Enterprise enterprise;
     private Network network;
-    private OrganizationDirectory organizationDirectory;
+    private OrgDirectory organizationDirectory;
     AdpDirec adopterdirectory;
     DonorDirectory donorDirectory;
 
-    public FundingUnitWorkRequestJPanel(JPanel userProcessContainer, UserAccount account, Enterprise enterprise, EcoSystem system, AdpDirec adopterdirectory, DonorDirectory donorDirectory) {
+    public FundingUnitWorkRequestJPanel(JPanel userProcessContainer, UAcc account, Enterprise enterprise, EcoSystem system, AdpDirec adopterdirectory, DonorDirectory donorDirectory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.userAccount = account;
@@ -198,7 +198,7 @@ public class FundingUnitWorkRequestJPanel extends javax.swing.JPanel {
                 }
                 Organization org = organizationDirectory.createOrganization(request.getName(), Organization.Type.Donor);
                 Employee emp = org.getEmployeeDirectory().createEmployee(request.getName());
-                UserAccount ua1 = org.getUserAccountDirectory().createUserAccount(request.getUserName(), request.getUserPassword(), emp, new DonorRole());
+                UAcc ua1 = org.getUserAccountDirectory().createUserAccount(request.getUserName(), request.getUserPassword(), emp, new DonorRole());
                 Donor donor = new Donor();
                 int uid = donorDirectory.getDonorsList().size() + 1;
                 donor = this.donorDirectory.addDonor();

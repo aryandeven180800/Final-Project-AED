@@ -15,7 +15,7 @@ import Business.Network.Network;
 import Business.Organization.ChildCareOrganization;
 import Business.Organization.Organization;
 import Business.Role.Role;
-import Business.UserAccount.UserAccount;
+import Business.UAcc.UAcc;
 import Business.WorkQueue.ChildCareWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
@@ -35,7 +35,7 @@ public class AcquireChild extends javax.swing.JPanel {
     JPanel userProcessContainer;
     Enterprise enterprise;
     Organization organization;
-    UserAccount account;
+    UAcc account;
     ChildCareOrganization childCareOrganization;
     ChildDirectory childdirectory;
     Child child;
@@ -46,7 +46,7 @@ public class AcquireChild extends javax.swing.JPanel {
     Role roler;
     Network network;
 
-    public AcquireChild(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, AdpDirec adopterdirectory) {
+    public AcquireChild(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, AdpDirec adopterdirectory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.account = account;

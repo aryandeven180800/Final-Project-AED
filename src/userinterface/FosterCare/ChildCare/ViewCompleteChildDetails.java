@@ -12,7 +12,7 @@ import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.ChildCareOrganization;
 import Business.Organization.Organization;
-import Business.UserAccount.UserAccount;
+import Business.UAcc.UAcc;
 import Business.WorkQueue.MedicalHelpWorkRequest;
 import Business.WorkQueue.EducationalHelpWorkRequest;
 import Business.WorkQueue.WorkRequest;
@@ -37,14 +37,14 @@ public class ViewCompleteChildDetails extends javax.swing.JPanel {
      */
     JPanel userProcessContainer;
     Child child;
-    UserAccount account;
+    UAcc account;
     ChildCareOrganization organization;
     Enterprise enterprise;
     EcoSystem business;
     ChildDirectory childdirectory;
     Network network;
 	
-    ViewCompleteChildDetails(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, Child child,boolean flag) {
+    ViewCompleteChildDetails(JPanel userProcessContainer, UAcc account, Organization organization, Enterprise enterprise, EcoSystem business, ChildDirectory childdirectory, Child child,boolean flag) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.child = child;
