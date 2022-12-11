@@ -53,7 +53,7 @@ public class AdoptionUnitWorkRequestJPanel extends javax.swing.JPanel {
     
     public void populateTable() {
 
-        DefaultTableModel model = (DefaultTableModel) adpworkRequest.getModel();
+        DefaultTableModel model = (DefaultTableModel) adopworReqtable.getModel();
 
         model.setRowCount(0);
 
@@ -85,9 +85,9 @@ public class AdoptionUnitWorkRequestJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        adpworkRequest = new javax.swing.JTable();
-        assignJButton = new javax.swing.JButton();
-        processJButton = new javax.swing.JButton();
+        adopworReqtable = new javax.swing.JTable();
+        asgnJButn = new javax.swing.JButton();
+        procJButnclick = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         lblRefresh = new javax.swing.JLabel();
@@ -97,9 +97,9 @@ public class AdoptionUnitWorkRequestJPanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(1058, 840));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        adpworkRequest.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        adpworkRequest.setForeground(new java.awt.Color(25, 56, 82));
-        adpworkRequest.setModel(new javax.swing.table.DefaultTableModel(
+        adopworReqtable.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        adopworReqtable.setForeground(new java.awt.Color(25, 56, 82));
+        adopworReqtable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
@@ -125,31 +125,29 @@ public class AdoptionUnitWorkRequestJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(adpworkRequest);
+        jScrollPane1.setViewportView(adopworReqtable);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 980, 170));
 
-        assignJButton.setBackground(new java.awt.Color(255, 255, 255));
-        assignJButton.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        assignJButton.setForeground(new java.awt.Color(25, 56, 82));
-        assignJButton.setText("Assign To Me");
-        assignJButton.addActionListener(new java.awt.event.ActionListener() {
+        asgnJButn.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        asgnJButn.setForeground(new java.awt.Color(25, 56, 82));
+        asgnJButn.setText("Assign To Me");
+        asgnJButn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                assignJButtonActionPerformed(evt);
+                asgnJButnActionPerformed(evt);
             }
         });
-        add(assignJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 430, -1, -1));
+        add(asgnJButn, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 430, -1, -1));
 
-        processJButton.setBackground(new java.awt.Color(255, 255, 255));
-        processJButton.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        processJButton.setForeground(new java.awt.Color(25, 56, 82));
-        processJButton.setText("Process");
-        processJButton.addActionListener(new java.awt.event.ActionListener() {
+        procJButnclick.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        procJButnclick.setForeground(new java.awt.Color(25, 56, 82));
+        procJButnclick.setText("Process");
+        procJButnclick.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                processJButtonActionPerformed(evt);
+                procJButnclickActionPerformed(evt);
             }
         });
-        add(processJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 430, 120, -1));
+        add(procJButnclick, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 430, 120, -1));
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(25, 56, 82));
@@ -169,12 +167,12 @@ public class AdoptionUnitWorkRequestJPanel extends javax.swing.JPanel {
         add(lblRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 130, 40, 40));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void assignJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButtonActionPerformed
+    private void asgnJButnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asgnJButnActionPerformed
 
-        int selectedRow = adpworkRequest.getSelectedRow();
+        int selectedRow = adopworReqtable.getSelectedRow();
 
         if (selectedRow >= 0) {
-            WorkRequest request = (WorkRequest) adpworkRequest.getValueAt(selectedRow, 0);
+            WorkRequest request = (WorkRequest) adopworReqtable.getValueAt(selectedRow, 0);
             if ("Completed".equalsIgnoreCase(request.getStatus())) {
                 JOptionPane.showMessageDialog(null, "Request already processed.");
                 return;
@@ -189,14 +187,14 @@ public class AdoptionUnitWorkRequestJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Choose a request to process.");
             return;
         }
-    }//GEN-LAST:event_assignJButtonActionPerformed
+    }//GEN-LAST:event_asgnJButnActionPerformed
 
-    private void processJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processJButtonActionPerformed
+    private void procJButnclickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_procJButnclickActionPerformed
 
-        int selectedRow = adpworkRequest.getSelectedRow();
+        int selectedRow = adopworReqtable.getSelectedRow();
 
         if (selectedRow >= 0) {
-            AdopterRegistrationRequest request = (AdopterRegistrationRequest) adpworkRequest.getValueAt(selectedRow, 0);
+            AdopterRegistrationRequest request = (AdopterRegistrationRequest) adopworReqtable.getValueAt(selectedRow, 0);
             if ("Completed".equalsIgnoreCase(request.getStatus())) {
                 JOptionPane.showMessageDialog(null, "Request already processed.");
                 return;
@@ -250,7 +248,7 @@ public class AdoptionUnitWorkRequestJPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "User account has been activated successfully");
             }
         }
-    }//GEN-LAST:event_processJButtonActionPerformed
+    }//GEN-LAST:event_procJButnclickActionPerformed
 
     private void lblRefreshMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRefreshMousePressed
         // TODO add your handling code here:
@@ -259,12 +257,12 @@ public class AdoptionUnitWorkRequestJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable adpworkRequest;
-    private javax.swing.JButton assignJButton;
+    private javax.swing.JTable adopworReqtable;
+    private javax.swing.JButton asgnJButn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblRefresh;
-    private javax.swing.JButton processJButton;
+    private javax.swing.JButton procJButnclick;
     // End of variables declaration//GEN-END:variables
 }

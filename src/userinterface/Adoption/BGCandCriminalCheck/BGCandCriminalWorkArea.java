@@ -67,9 +67,9 @@ public class BGCandCriminalWorkArea extends javax.swing.JPanel {
         jPanel3 = new javax.swing.JPanel();
         bgcAndCriminal = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        BGCAndCri = new javax.swing.JLabel();
+        processbgcandcriminalcheck = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        orgworkcrime = new javax.swing.JLabel();
         valueLabel = new javax.swing.JLabel();
         rightSystemAdminPanel = new javax.swing.JPanel();
 
@@ -97,25 +97,25 @@ public class BGCandCriminalWorkArea extends javax.swing.JPanel {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/manageIcon.png"))); // NOI18N
         bgcAndCriminal.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 37, 36));
 
-        BGCAndCri.setBackground(new java.awt.Color(255, 204, 204));
-        BGCAndCri.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        BGCAndCri.setText("Process BGC & Criminal Check");
-        BGCAndCri.addMouseListener(new java.awt.event.MouseAdapter() {
+        processbgcandcriminalcheck.setBackground(new java.awt.Color(255, 204, 204));
+        processbgcandcriminalcheck.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        processbgcandcriminalcheck.setText("Process BGC & Criminal Check");
+        processbgcandcriminalcheck.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                BGCAndCriMousePressed(evt);
+                processbgcandcriminalcheckMousePressed(evt);
             }
         });
-        bgcAndCriminal.add(BGCAndCri, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 6, 225, 36));
+        bgcAndCriminal.add(processbgcandcriminalcheck, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 6, 225, 36));
 
         jPanel3.add(bgcAndCriminal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 280, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/lens.png"))); // NOI18N
         jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 210, 200));
 
-        jLabel3.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel3.setText("Organization");
-        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 120, 20));
+        orgworkcrime.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
+        orgworkcrime.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        orgworkcrime.setText("Organization");
+        jPanel3.add(orgworkcrime, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 120, 20));
 
         valueLabel.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
         jPanel3.add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 130, 20));
@@ -142,9 +142,9 @@ public class BGCandCriminalWorkArea extends javax.swing.JPanel {
         add(systemAdminPanel, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BGCAndCriMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BGCAndCriMousePressed
+    private void processbgcandcriminalcheckMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_processbgcandcriminalcheckMousePressed
         BGCandCriminalRequestJPanel();
-    }//GEN-LAST:event_BGCAndCriMousePressed
+    }//GEN-LAST:event_processbgcandcriminalcheckMousePressed
 
     private void bgcAndCriminalMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bgcAndCriminalMousePressed
         // TODO add your handling code here:
@@ -153,12 +153,12 @@ public class BGCandCriminalWorkArea extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel BGCAndCri;
     private javax.swing.JPanel bgcAndCriminal;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel orgworkcrime;
+    private javax.swing.JLabel processbgcandcriminalcheck;
     private javax.swing.JPanel rightSystemAdminPanel;
     private javax.swing.JPanel systemAdminPanel;
     private javax.swing.JLabel valueLabel;

@@ -57,7 +57,7 @@ public class ChildSelectionJpanel extends javax.swing.JPanel {
         for (Adopter a : adopterdirectory.getAdoptersList()) {
             if (a.getUsername().equals(account.getUsername())) {
                 adopter = a;
-                btnAdopt.setEnabled(!adopter.isFlag());
+                butonAdopt.setEnabled(!adopter.isFlag());
             }
         }
         populateChildTable();
@@ -73,9 +73,9 @@ public class ChildSelectionJpanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        childselectiontable = new javax.swing.JScrollPane();
         tblChild = new javax.swing.JTable();
-        btnAdopt = new javax.swing.JButton();
+        butonAdopt = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -106,24 +106,24 @@ public class ChildSelectionJpanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tblChild);
+        childselectiontable.setViewportView(tblChild);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 790, 120));
+        add(childselectiontable, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 790, 120));
 
-        btnAdopt.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
-        btnAdopt.setText("Adopt");
-        btnAdopt.addActionListener(new java.awt.event.ActionListener() {
+        butonAdopt.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
+        butonAdopt.setText("Adopt");
+        butonAdopt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdoptActionPerformed(evt);
+                butonAdoptActionPerformed(evt);
             }
         });
-        add(btnAdopt, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 400, 100, -1));
+        add(butonAdopt, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 400, 100, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/adopt.png"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 830, 520));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAdoptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdoptActionPerformed
+    private void butonAdoptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butonAdoptActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblChild.getSelectedRow();
         if (selectedRow < 0) {
@@ -157,8 +157,8 @@ public class ChildSelectionJpanel extends javax.swing.JPanel {
         }
         adopter.setFlag(true);
         JOptionPane.showMessageDialog(null, "Request has been sent to Child Care");
-        btnAdopt.setEnabled(false);
-    }//GEN-LAST:event_btnAdoptActionPerformed
+        butonAdopt.setEnabled(false);
+    }//GEN-LAST:event_butonAdoptActionPerformed
 
     public void populateChildTable() {
         DefaultTableModel dtms = (DefaultTableModel) tblChild.getModel();
@@ -179,10 +179,10 @@ public class ChildSelectionJpanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAdopt;
+    private javax.swing.JButton butonAdopt;
+    private javax.swing.JScrollPane childselectiontable;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblChild;
     // End of variables declaration//GEN-END:variables
 }

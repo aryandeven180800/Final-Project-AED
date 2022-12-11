@@ -89,9 +89,9 @@ public class CheckStatusJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        tblRequest = new javax.swing.JScrollPane();
+        tblreqstatus = new javax.swing.JScrollPane();
         tblReq = new javax.swing.JTable();
-        btnProceed = new javax.swing.JButton();
+        btnProcclick = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -121,24 +121,24 @@ public class CheckStatusJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        tblRequest.setViewportView(tblReq);
+        tblreqstatus.setViewportView(tblReq);
 
-        add(tblRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 860, 130));
+        add(tblreqstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 860, 130));
 
-        btnProceed.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
-        btnProceed.setText("Proceed");
-        btnProceed.addActionListener(new java.awt.event.ActionListener() {
+        btnProcclick.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
+        btnProcclick.setText("Proceed");
+        btnProcclick.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnProceedActionPerformed(evt);
+                btnProcclickActionPerformed(evt);
             }
         });
-        add(btnProceed, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 340, 150, 30));
+        add(btnProcclick, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 340, 150, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/kids 2.png"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 920, 400));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnProceedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProceedActionPerformed
+    private void btnProcclickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcclickActionPerformed
         // TODO add your handling code here:
         if (tblReq.getRowCount() < 1) {
             JOptionPane.showMessageDialog(null, "Adoption request is still in process with the Investigation team");
@@ -151,14 +151,14 @@ public class CheckStatusJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Adoption request is still in process with the Investigation team");
         } else
             JOptionPane.showMessageDialog(null, "Adoption request denied by Investigation Team");
-    }//GEN-LAST:event_btnProceedActionPerformed
+    }//GEN-LAST:event_btnProcclickActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnProceed;
+    private javax.swing.JButton btnProcclick;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JTable tblReq;
-    private javax.swing.JScrollPane tblRequest;
+    private javax.swing.JScrollPane tblreqstatus;
     // End of variables declaration//GEN-END:variables
 }

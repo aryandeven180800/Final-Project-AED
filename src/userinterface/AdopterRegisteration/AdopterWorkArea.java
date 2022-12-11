@@ -79,7 +79,7 @@ public class AdopterWorkArea extends javax.swing.JPanel {
         jPanel3 = new javax.swing.JPanel();
         Adopter = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        ado = new javax.swing.JLabel();
+        checkyourstatus = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         valueLabel = new javax.swing.JLabel();
@@ -109,14 +109,14 @@ public class AdopterWorkArea extends javax.swing.JPanel {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/manageIcon.png"))); // NOI18N
         Adopter.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 37, -1));
 
-        ado.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        ado.setText("Check Your Status");
-        ado.addMouseListener(new java.awt.event.MouseAdapter() {
+        checkyourstatus.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        checkyourstatus.setText("Check Your Status");
+        checkyourstatus.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                adoMousePressed(evt);
+                checkyourstatusMousePressed(evt);
             }
         });
-        Adopter.add(ado, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 6, 225, 36));
+        Adopter.add(checkyourstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 6, 225, 36));
 
         jPanel3.add(Adopter, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 280, -1));
 
@@ -153,9 +153,9 @@ public class AdopterWorkArea extends javax.swing.JPanel {
         add(systemAdminPanel, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void adoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_adoMousePressed
+    private void checkyourstatusMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkyourstatusMousePressed
         goToCheckStatusJPanel();
-    }//GEN-LAST:event_adoMousePressed
+    }//GEN-LAST:event_checkyourstatusMousePressed
 
     private void AdopterMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AdopterMousePressed
         // TODO add your handling code here:
@@ -165,7 +165,7 @@ public class AdopterWorkArea extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Adopter;
-    private javax.swing.JLabel ado;
+    private javax.swing.JLabel checkyourstatus;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

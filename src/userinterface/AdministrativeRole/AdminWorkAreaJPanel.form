@@ -96,7 +96,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jLabel1" pref="42" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="manageOrganisation" min="-2" pref="226" max="-2" attributes="0"/>
+                          <Component id="ORGANIZATIONMAN" min="-2" pref="226" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -106,7 +106,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel1" max="32767" attributes="0"/>
-                              <Component id="manageOrganisation" max="32767" attributes="0"/>
+                              <Component id="ORGANIZATIONMAN" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -114,7 +114,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="manageOrganisation">
+                <Component class="javax.swing.JLabel" name="ORGANIZATIONMAN">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="99" green="cc" red="ff" type="rgb"/>
@@ -125,7 +125,7 @@
                     <Property name="text" type="java.lang.String" value="Manage Organisation"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="manageOrganisationMousePressed"/>
+                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ORGANIZATIONMANMousePressed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel1">
@@ -162,7 +162,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jLabel2" pref="39" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="manageEmployee" min="-2" pref="229" max="-2" attributes="0"/>
+                          <Component id="EMPLOYEEMAN" min="-2" pref="229" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -173,7 +173,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="manageEmployee" min="-2" pref="37" max="-2" attributes="0"/>
+                                  <Component id="EMPLOYEEMAN" min="-2" pref="37" max="-2" attributes="0"/>
                               </Group>
                               <Component id="jLabel2" alignment="0" max="32767" attributes="0"/>
                           </Group>
@@ -183,7 +183,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="manageEmployee">
+                <Component class="javax.swing.JLabel" name="EMPLOYEEMAN">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="99" green="cc" red="ff" type="rgb"/>
@@ -195,7 +195,7 @@
                     <Property name="text" type="java.lang.String" value="Manage Employee"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="manageEmployeeMousePressed"/>
+                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="EMPLOYEEMANMousePressed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel2">
@@ -229,7 +229,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jLabel5" min="-2" pref="37" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="manageUser" min="-2" pref="230" max="-2" attributes="0"/>
+                          <Component id="USERMAN" min="-2" pref="230" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -243,7 +243,7 @@
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          <Component id="manageUser" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="USERMAN" min="-2" pref="40" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -257,7 +257,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="manageUser">
+                <Component class="javax.swing.JLabel" name="USERMAN">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="99" green="cc" red="ff" type="rgb"/>
@@ -296,7 +296,7 @@
                           <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                           <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="ManageRequest" min="-2" pref="234" max="-2" attributes="0"/>
+                          <Component id="REQUESTMAN" min="-2" pref="234" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -304,7 +304,7 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="ManageRequest" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="REQUESTMAN" min="-2" pref="40" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -323,7 +323,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="ManageRequest">
+                <Component class="javax.swing.JLabel" name="REQUESTMAN">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="99" green="cc" red="ff" type="rgb"/>
@@ -334,13 +334,16 @@
                     <Property name="text" type="java.lang.String" value="Manage Request"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ManageRequestMousePressed"/>
+                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="REQUESTMANMousePressed"/>
                   </Events>
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="jLabel4">
+            <Component class="javax.swing.JLabel" name="jLabel">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="99" green="ff" red="99" type="rgb"/>
+                </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/Images/systemadminlogo.png"/>
                 </Property>

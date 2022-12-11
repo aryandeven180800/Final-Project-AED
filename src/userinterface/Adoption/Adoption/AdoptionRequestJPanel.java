@@ -50,7 +50,7 @@ public class AdoptionRequestJPanel extends javax.swing.JPanel {
     
     public void populateWorkRequest() {
 
-        DefaultTableModel dtm = (DefaultTableModel) tblAdoptersRequest.getModel();
+        DefaultTableModel dtm = (DefaultTableModel) tableforadoprequestproc.getModel();
         dtm.setRowCount(0);
         for (WorkRequest request : this.business.getWorkQueue().getWorkRequestList()) {
 
@@ -76,23 +76,23 @@ public class AdoptionRequestJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        adoptionrequestpage = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblAdoptersRequest = new javax.swing.JTable();
-        btnAssignToMe = new javax.swing.JButton();
-        btnProcess = new javax.swing.JButton();
+        tableforadoprequestproc = new javax.swing.JTable();
+        assigntomebuton = new javax.swing.JButton();
+        processadoptionbutton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("SansSerif", 1, 20)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("ADOPTION REQUEST");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, 357, -1));
+        adoptionrequestpage.setFont(new java.awt.Font("SansSerif", 1, 20)); // NOI18N
+        adoptionrequestpage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        adoptionrequestpage.setText("ADOPTION REQUEST");
+        add(adoptionrequestpage, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, 357, -1));
 
-        tblAdoptersRequest.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
-        tblAdoptersRequest.setModel(new javax.swing.table.DefaultTableModel(
+        tableforadoprequestproc.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        tableforadoprequestproc.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -111,44 +111,44 @@ public class AdoptionRequestJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tblAdoptersRequest);
+        jScrollPane1.setViewportView(tableforadoprequestproc);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 830, 160));
 
-        btnAssignToMe.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
-        btnAssignToMe.setText("Assign To Me");
-        btnAssignToMe.addActionListener(new java.awt.event.ActionListener() {
+        assigntomebuton.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
+        assigntomebuton.setText("Assign To Me");
+        assigntomebuton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAssignToMeActionPerformed(evt);
+                assigntomebutonActionPerformed(evt);
             }
         });
-        add(btnAssignToMe, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 460, 132, -1));
+        add(assigntomebuton, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 460, 132, -1));
 
-        btnProcess.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
-        btnProcess.setText("Process");
-        btnProcess.addActionListener(new java.awt.event.ActionListener() {
+        processadoptionbutton.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
+        processadoptionbutton.setText("Process");
+        processadoptionbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnProcessActionPerformed(evt);
+                processadoptionbuttonActionPerformed(evt);
             }
         });
-        add(btnProcess, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 460, 112, -1));
+        add(processadoptionbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 460, 112, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/adopt.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 730, 530));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAssignToMeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignToMeActionPerformed
+    private void assigntomebutonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assigntomebutonActionPerformed
         // TODO add your handling code here:
-        int selectedRow = tblAdoptersRequest.getSelectedRow();
+        int selectedRow = tableforadoprequestproc.getSelectedRow();
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a work request to process");
             return;
         }
-        Object receiverval = tblAdoptersRequest.getValueAt(selectedRow, 2);
-        Object statusval = tblAdoptersRequest.getValueAt(selectedRow, 4);
+        Object receiverval = tableforadoprequestproc.getValueAt(selectedRow, 2);
+        Object statusval = tableforadoprequestproc.getValueAt(selectedRow, 4);
         if (receiverval == null && (statusval == null || "".equalsIgnoreCase((String) statusval))) {
-            WorkRequest re = (WorkRequest) tblAdoptersRequest.getValueAt(selectedRow, 0);
+            WorkRequest re = (WorkRequest) tableforadoprequestproc.getValueAt(selectedRow, 0);
             re.setReceiver(account);
             re.setStatus("Pending with Adoption Organization");
             JOptionPane.showMessageDialog(null, "Request has been assigned to you");
@@ -160,18 +160,18 @@ public class AdoptionRequestJPanel extends javax.swing.JPanel {
         else if (receiverval.equals(account.getUsername())) {
             JOptionPane.showMessageDialog(null, "Work request is already assigned to you");
         }
-    }//GEN-LAST:event_btnAssignToMeActionPerformed
+    }//GEN-LAST:event_assigntomebutonActionPerformed
 
-    private void btnProcessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcessActionPerformed
+    private void processadoptionbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processadoptionbuttonActionPerformed
         // TODO add your handling code here:
-        int selectedRow = tblAdoptersRequest.getSelectedRow();
+        int selectedRow = tableforadoprequestproc.getSelectedRow();
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a work request");
             return;
         }
-        WorkRequest req = (WorkRequest) tblAdoptersRequest.getValueAt(selectedRow, 0);
-        Object receiverval = tblAdoptersRequest.getValueAt(selectedRow, 2);
-        Object statusval = tblAdoptersRequest.getValueAt(selectedRow, 4);
+        WorkRequest req = (WorkRequest) tableforadoprequestproc.getValueAt(selectedRow, 0);
+        Object receiverval = tableforadoprequestproc.getValueAt(selectedRow, 2);
+        Object statusval = tableforadoprequestproc.getValueAt(selectedRow, 4);
         for (Adopter a : adopterdirectory.getAdoptersList()) {
             if (a.getUserId() == req.getUserId()) {
                 adopter = a;
@@ -191,15 +191,15 @@ public class AdoptionRequestJPanel extends javax.swing.JPanel {
 //                JOptionPane.showMessageDialog(null, "The selected workrequest assigned to you is already processed");
             }
         }
-    }//GEN-LAST:event_btnProcessActionPerformed
+    }//GEN-LAST:event_processadoptionbuttonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAssignToMe;
-    private javax.swing.JButton btnProcess;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel adoptionrequestpage;
+    private javax.swing.JButton assigntomebuton;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tblAdoptersRequest;
+    private javax.swing.JButton processadoptionbutton;
+    private javax.swing.JTable tableforadoprequestproc;
     // End of variables declaration//GEN-END:variables
 }

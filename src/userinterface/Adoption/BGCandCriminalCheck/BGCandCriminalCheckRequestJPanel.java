@@ -51,7 +51,7 @@ public class BGCandCriminalCheckRequestJPanel extends javax.swing.JPanel {
     
     public void populateWorkRequest() {
 
-        DefaultTableModel dtm = (DefaultTableModel) tblRequest.getModel();
+        DefaultTableModel dtm = (DefaultTableModel) backandcriminalcheckrequesttable.getModel();
         dtm.setRowCount(0);
         for (WorkRequest request : bgcOrganization.getWorkQueue().getWorkRequestList()) {
             if (request instanceof BGVProcessWorkRequest) {
@@ -76,23 +76,23 @@ public class BGCandCriminalCheckRequestJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblHeading = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tblRequest = new javax.swing.JTable();
-        btnAssign = new javax.swing.JButton();
-        btnProcess = new javax.swing.JButton();
+        backgroundAndCromalCheckRequesthead = new javax.swing.JLabel();
+        backandcriminalchecktable = new javax.swing.JScrollPane();
+        backandcriminalcheckrequesttable = new javax.swing.JTable();
+        assignttomebutton = new javax.swing.JButton();
+        processbackgroundandcheckreqbutton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblHeading.setFont(new java.awt.Font("SansSerif", 1, 20)); // NOI18N
-        lblHeading.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblHeading.setText("BACKGROUND AND CRIMINAL CHECK REQUESTS");
-        add(lblHeading, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, 511, -1));
+        backgroundAndCromalCheckRequesthead.setFont(new java.awt.Font("SansSerif", 1, 20)); // NOI18N
+        backgroundAndCromalCheckRequesthead.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        backgroundAndCromalCheckRequesthead.setText("BACKGROUND AND CRIMINAL CHECK REQUESTS");
+        add(backgroundAndCromalCheckRequesthead, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, 511, -1));
 
-        tblRequest.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
-        tblRequest.setModel(new javax.swing.table.DefaultTableModel(
+        backandcriminalcheckrequesttable.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        backandcriminalcheckrequesttable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -111,46 +111,44 @@ public class BGCandCriminalCheckRequestJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tblRequest);
+        backandcriminalchecktable.setViewportView(backandcriminalcheckrequesttable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 340, 930, 170));
+        add(backandcriminalchecktable, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 340, 930, 170));
 
-        btnAssign.setBackground(new java.awt.Color(255, 255, 255));
-        btnAssign.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
-        btnAssign.setText("ASSIGN TO ME");
-        btnAssign.addActionListener(new java.awt.event.ActionListener() {
+        assignttomebutton.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
+        assignttomebutton.setText("ASSIGN TO ME");
+        assignttomebutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAssignActionPerformed(evt);
+                assignttomebuttonActionPerformed(evt);
             }
         });
-        add(btnAssign, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 580, 160, 30));
+        add(assignttomebutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 580, 160, 30));
 
-        btnProcess.setBackground(new java.awt.Color(255, 255, 255));
-        btnProcess.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
-        btnProcess.setText("PROCESS");
-        btnProcess.addActionListener(new java.awt.event.ActionListener() {
+        processbackgroundandcheckreqbutton.setFont(new java.awt.Font("SansSerif", 1, 13)); // NOI18N
+        processbackgroundandcheckreqbutton.setText("PROCESS");
+        processbackgroundandcheckreqbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnProcessActionPerformed(evt);
+                processbackgroundandcheckreqbuttonActionPerformed(evt);
             }
         });
-        add(btnProcess, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 570, 150, -1));
+        add(processbackgroundandcheckreqbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 570, 150, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/kids5.png"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 1040, 450));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignActionPerformed
+    private void assignttomebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignttomebuttonActionPerformed
         // TODO add your handling code here:
-        int selectedRow = tblRequest.getSelectedRow();
+        int selectedRow = backandcriminalcheckrequesttable.getSelectedRow();
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a work request");
             return;
         }
-        Object receiverval = tblRequest.getValueAt(selectedRow, 2);
-        Object statusval = tblRequest.getValueAt(selectedRow, 5);
+        Object receiverval = backandcriminalcheckrequesttable.getValueAt(selectedRow, 2);
+        Object statusval = backandcriminalcheckrequesttable.getValueAt(selectedRow, 5);
 
         if ("Pending with BGC organization".equals(statusval) || receiverval == null) {
-            WorkRequest re = (WorkRequest) tblRequest.getValueAt(selectedRow, 0);
+            WorkRequest re = (WorkRequest) backandcriminalcheckrequesttable.getValueAt(selectedRow, 0);
             re.setReceiver(account);
             re.setStatus("BGC organization processing");
             JOptionPane.showMessageDialog(null, "Work request has been assigned to you");
@@ -164,18 +162,18 @@ public class BGCandCriminalCheckRequestJPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "Work request is already assigned to you");
             }
         }
-    }//GEN-LAST:event_btnAssignActionPerformed
+    }//GEN-LAST:event_assignttomebuttonActionPerformed
 
-    private void btnProcessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcessActionPerformed
+    private void processbackgroundandcheckreqbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processbackgroundandcheckreqbuttonActionPerformed
         // TODO add your handling code here:
-        int selectedRow = tblRequest.getSelectedRow();
+        int selectedRow = backandcriminalcheckrequesttable.getSelectedRow();
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a work request");
             return;
         }
-        WorkRequest req = (WorkRequest) tblRequest.getValueAt(selectedRow, 0);
-        Object receiverval = tblRequest.getValueAt(selectedRow, 2);
-        Object statusval = tblRequest.getValueAt(selectedRow, 5);
+        WorkRequest req = (WorkRequest) backandcriminalcheckrequesttable.getValueAt(selectedRow, 0);
+        Object receiverval = backandcriminalcheckrequesttable.getValueAt(selectedRow, 2);
+        Object statusval = backandcriminalcheckrequesttable.getValueAt(selectedRow, 5);
         for (Adopter a : adopterdirectory.getAdoptersList()) {
             if (a.getUserId() == req.getUserId()) {
                 adopter = a;
@@ -195,15 +193,15 @@ public class BGCandCriminalCheckRequestJPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "Please select the work request assigned to you to proceed");
             }
         }
-    }//GEN-LAST:event_btnProcessActionPerformed
+    }//GEN-LAST:event_processbackgroundandcheckreqbuttonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAssign;
-    private javax.swing.JButton btnProcess;
+    private javax.swing.JButton assignttomebutton;
+    private javax.swing.JTable backandcriminalcheckrequesttable;
+    private javax.swing.JScrollPane backandcriminalchecktable;
+    private javax.swing.JLabel backgroundAndCromalCheckRequesthead;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblHeading;
-    private javax.swing.JTable tblRequest;
+    private javax.swing.JButton processbackgroundandcheckreqbutton;
     // End of variables declaration//GEN-END:variables
 }
